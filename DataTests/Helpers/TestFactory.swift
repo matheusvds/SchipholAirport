@@ -9,6 +9,10 @@ func makeDummyRequest() -> URLRequest {
     return URLRequest(url: makeDummyURL())
 }
 
+func makeHttpResponse(statusCode code: Int = 200) -> HTTPURLResponse {
+    return HTTPURLResponse(url: makeDummyURL(), statusCode: code, httpVersion: nil, headerFields: nil)!
+}
+
 func makeValidData() -> Data {
     return Data("{\"property\":\"value\"}".utf8)
 }

@@ -5,7 +5,6 @@ import Domain
 
 class RemoteGetAirportsTests: XCTestCase {
     
-    
     func test_sut_should_complete_with_success_when_http_client_completes_with_valid_data() {
         let (sut, httpSpy) = makeSut()
         let expectedResult = makeGetAirports()
@@ -89,9 +88,9 @@ class RemoteGetAirportsTests: XCTestCase {
 extension RemoteGetAirportsTests {
     
     func makeSut() -> (RemoteGetAirports, HttpClientSpy) {
-        
         let httpSpy = HttpClientSpy()
         let sut = RemoteGetAirports(httpClient: httpSpy)
+        checkMemoryLeak(for: sut)
         return (sut, httpSpy)
     }
     
@@ -102,7 +101,6 @@ extension RemoteGetAirportsTests {
         file: StaticString = #file,
         line: UInt = #line
     ) {
-        
         let expect = expectation(description: "wait")
         sut.getAirports(getAirportsModel: GetAirportsModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
