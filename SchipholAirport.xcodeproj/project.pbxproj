@@ -6,9 +6,18 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C632E5F9261CDF0E0033656B /* GetAirports.swift in Sources */ = {isa = PBXBuildFile; fileRef = C632E5F8261CDF0E0033656B /* GetAirports.swift */; };
+		C632E5FC261CDF930033656B /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C632E5FB261CDF930033656B /* Airport.swift */; };
+		C632E603261CE0600033656B /* GetAirportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C632E602261CE0600033656B /* GetAirportError.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C632E5EF261CDEAD0033656B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C632E5F2261CDEAD0033656B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C632E5F8261CDF0E0033656B /* GetAirports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAirports.swift; sourceTree = "<group>"; };
+		C632E5FB261CDF930033656B /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		C632E602261CE0600033656B /* GetAirportError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAirportError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +50,36 @@
 		C632E5F0261CDEAD0033656B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C632E601261CE0590033656B /* Error */,
+				C632E5FF261CDFA50033656B /* Models */,
+				C632E5FE261CDF9A0033656B /* UseCases */,
 				C632E5F2261CDEAD0033656B /* Info.plist */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		C632E5FE261CDF9A0033656B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C632E5F8261CDF0E0033656B /* GetAirports.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		C632E5FF261CDFA50033656B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C632E5FB261CDF930033656B /* Airport.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C632E601261CE0590033656B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				C632E602261CE0600033656B /* GetAirportError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +123,7 @@
 				TargetAttributes = {
 					C632E5EE261CDEAD0033656B = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -123,6 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C632E5F9261CDF0E0033656B /* GetAirports.swift in Sources */,
+				C632E603261CE0600033656B /* GetAirportError.swift in Sources */,
+				C632E5FC261CDF930033656B /* Airport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +294,7 @@
 		C632E5F5261CDEAD0033656B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -269,6 +310,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheusvds.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -277,6 +319,7 @@
 		C632E5F6261CDEAD0033656B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
