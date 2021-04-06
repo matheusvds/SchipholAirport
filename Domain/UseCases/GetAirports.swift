@@ -6,4 +6,6 @@ public protocol GetAirports {
     func getAirports(getAirportsModel: GetAirportsModel, completion: @escaping (Result) -> Void)
 }
 
-public struct GetAirportsModel { }
+public struct GetAirportsModel {
+    public init() { }
+}
