@@ -329,14 +329,14 @@
 			isa = PBXGroup;
 			children = (
 				C65A805C261E21D40077F02C /* SchipholAirportApp */,
+				C65A7FFA261E10600077F02C /* Application */,
+				C65A8005261E10600077F02C /* ApplicationTests */,
 				C632E5F0261CDEAD0033656B /* Domain */,
 				C632E60D261CE1B20033656B /* Data */,
 				C65A7F1C261CF3E20077F02C /* DataTests */,
 				C65A7F59261D01F30077F02C /* Infra */,
 				C65A7F64261D01F30077F02C /* InfraTests */,
 				C65A7FAB261D06540077F02C /* UseCasesIntegrationTests */,
-				C65A7FFA261E10600077F02C /* Application */,
-				C65A8005261E10600077F02C /* ApplicationTests */,
 				C632E5DE261CDD220033656B /* Products */,
 				C632E61D261CE25F0033656B /* Frameworks */,
 			);
