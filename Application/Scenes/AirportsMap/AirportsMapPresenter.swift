@@ -5,11 +5,11 @@ protocol AirportsMapPresentationLogic {
     func presentFetchedAirports(response: AirportsMap.GetAirports.Response)
 }
 
-final class AirportsPresenter {
+final class AirportsMapPresenter {
     weak var displayLogic: AirportsMapDisplayLogic?
 }
 
-extension AirportsPresenter: AirportsMapPresentationLogic {
+extension AirportsMapPresenter: AirportsMapPresentationLogic {
     
     func presentFetchedAirports(response: AirportsMap.GetAirports.Response) {
         

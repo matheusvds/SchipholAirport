@@ -53,6 +53,7 @@
 		C65A8037261E120D0077F02C /* AirportsMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8036261E120D0077F02C /* AirportsMapPresenter.swift */; };
 		C65A803E261E12480077F02C /* AirportsMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A803D261E12480077F02C /* AirportsMapRouter.swift */; };
 		C65A8045261E13D20077F02C /* AirportsMapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8044261E13D20077F02C /* AirportsMapModels.swift */; };
+		C65A804C261E1FBE0077F02C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A804B261E1FBE0077F02C /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,7 @@
 		C65A8036261E120D0077F02C /* AirportsMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapPresenter.swift; sourceTree = "<group>"; };
 		C65A803D261E12480077F02C /* AirportsMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapRouter.swift; sourceTree = "<group>"; };
 		C65A8044261E13D20077F02C /* AirportsMapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapModels.swift; sourceTree = "<group>"; };
+		C65A804B261E1FBE0077F02C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +460,7 @@
 		C65A7FFA261E10600077F02C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				C65A804B261E1FBE0077F02C /* Application.swift */,
 				C65A8026261E11330077F02C /* Scenes */,
 				C65A7FFC261E10600077F02C /* Info.plist */,
 			);
@@ -878,6 +881,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65A804C261E1FBE0077F02C /* Application.swift in Sources */,
 				C65A8029261E119B0077F02C /* AirportsMapViewController.swift in Sources */,
 				C65A8045261E13D20077F02C /* AirportsMapModels.swift in Sources */,
 				C65A803E261E12480077F02C /* AirportsMapRouter.swift in Sources */,
