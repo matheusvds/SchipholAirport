@@ -42,6 +42,8 @@
 		C65A7FC7261DDE750077F02C /* RemoteGetFlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A7FC6261DDE750077F02C /* RemoteGetFlights.swift */; };
 		C65A7FCD261DDEC90077F02C /* getFlightsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A7FCC261DDEC90077F02C /* getFlightsJSON.swift */; };
 		C65A7FDB261DDFDB0077F02C /* getFlightsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A7FCC261DDEC90077F02C /* getFlightsJSON.swift */; };
+		C65A7FE9261DEB100077F02C /* RemoteGetFlightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A7FE8261DEB100077F02C /* RemoteGetFlightsTests.swift */; };
+		C65A7FEF261DEDDA0077F02C /* GetFlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A7FEE261DEDDA0077F02C /* GetFlightsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		C65A7FBC261DD7E20077F02C /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
 		C65A7FC6261DDE750077F02C /* RemoteGetFlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetFlights.swift; sourceTree = "<group>"; };
 		C65A7FCC261DDEC90077F02C /* getFlightsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getFlightsJSON.swift; sourceTree = "<group>"; };
+		C65A7FE8261DEB100077F02C /* RemoteGetFlightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetFlightsTests.swift; sourceTree = "<group>"; };
+		C65A7FEE261DEDDA0077F02C /* GetFlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlightsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +302,7 @@
 				C65A7EEE261CE5450077F02C /* AirportsAPI.swift */,
 				C65A7EF1261CE9570077F02C /* AirportResource.swift */,
 				C65A7EF4261CE9730077F02C /* GetAirportsRequest.swift */,
+				C65A7FEE261DEDDA0077F02C /* GetFlightsRequest.swift */,
 			);
 			path = AirportsAPI;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				C65A7F3D261CF6C70077F02C /* Helpers */,
 				C65A7F36261CF5BF0077F02C /* Http */,
 				C65A7F30261CF4950077F02C /* RemoteGetAirportsTests.swift */,
+				C65A7FE8261DEB100077F02C /* RemoteGetFlightsTests.swift */,
 				C65A7F1F261CF3E20077F02C /* Info.plist */,
 			);
 			path = DataTests;
@@ -648,6 +654,7 @@
 				C632E62A261CE2EC0033656B /* HttpError.swift in Sources */,
 				C65A7EF9261CEAB30077F02C /* DataExtensions.swift in Sources */,
 				C65A7EEF261CE5450077F02C /* AirportsAPI.swift in Sources */,
+				C65A7FEF261DEDDA0077F02C /* GetFlightsRequest.swift in Sources */,
 				C65A7FC7261DDE750077F02C /* RemoteGetFlights.swift in Sources */,
 				C632E626261CE2DC0033656B /* HttpClient.swift in Sources */,
 			);
@@ -661,6 +668,7 @@
 				C65A7F31261CF4950077F02C /* RemoteGetAirportsTests.swift in Sources */,
 				C65A7F46261CF7610077F02C /* getAirportsJSON.swift in Sources */,
 				C65A7F4C261CF9540077F02C /* TestExtensions.swift in Sources */,
+				C65A7FE9261DEB100077F02C /* RemoteGetFlightsTests.swift in Sources */,
 				C65A7FCD261DDEC90077F02C /* getFlightsJSON.swift in Sources */,
 				C65A7F38261CF5C90077F02C /* HttpClientSpy.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ public final class RemoteGetFlights: GetFlights {
     }
     
     public func getFlights(getFlightsModel getAirportsModel: GetFlightsModel, completion: @escaping (GetFlights.Result) -> Void) {
-        let getAirportsRequest = GetAirportsRequest().request
+        let getAirportsRequest = GetFlightsRequest().request
         httpClient.get(request: getAirportsRequest) { [weak self] in
             guard self != nil else { return }
             switch $0 {
