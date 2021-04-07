@@ -54,6 +54,17 @@
 		C65A803E261E12480077F02C /* AirportsMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A803D261E12480077F02C /* AirportsMapRouter.swift */; };
 		C65A8045261E13D20077F02C /* AirportsMapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8044261E13D20077F02C /* AirportsMapModels.swift */; };
 		C65A804C261E1FBE0077F02C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A804B261E1FBE0077F02C /* Application.swift */; };
+		C65A805E261E21D40077F02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A805D261E21D40077F02C /* AppDelegate.swift */; };
+		C65A8067261E21D60077F02C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65A8066261E21D60077F02C /* Assets.xcassets */; };
+		C65A806A261E21D60077F02C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65A8068261E21D60077F02C /* LaunchScreen.storyboard */; };
+		C65A808D261E23300077F02C /* Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65A7FF9261E10600077F02C /* Application.framework */; };
+		C65A808E261E23300077F02C /* Application.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65A7FF9261E10600077F02C /* Application.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C65A8091261E23300077F02C /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C632E60C261CE1B20033656B /* Data.framework */; };
+		C65A8092261E23300077F02C /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C632E60C261CE1B20033656B /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C65A8095261E23300077F02C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C632E5EF261CDEAD0033656B /* Domain.framework */; };
+		C65A8096261E23300077F02C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C632E5EF261CDEAD0033656B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C65A8099261E23300077F02C /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65A7F58261D01F30077F02C /* Infra.framework */; };
+		C65A809A261E23300077F02C /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65A7F58261D01F30077F02C /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +110,34 @@
 			remoteGlobalIDString = C632E5EE261CDEAD0033656B;
 			remoteInfo = Domain;
 		};
+		C65A808F261E23300077F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C632E5D4261CDD220033656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65A7FF8261E10600077F02C;
+			remoteInfo = Application;
+		};
+		C65A8093261E23300077F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C632E5D4261CDD220033656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C632E60B261CE1B20033656B;
+			remoteInfo = Data;
+		};
+		C65A8097261E23300077F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C632E5D4261CDD220033656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C632E5EE261CDEAD0033656B;
+			remoteInfo = Domain;
+		};
+		C65A809B261E23300077F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C632E5D4261CDD220033656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65A7F57261D01F30077F02C;
+			remoteInfo = Infra;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +170,20 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C65A801D261E10BC0077F02C /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65A809D261E23300077F02C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C65A8096261E23300077F02C /* Domain.framework in Embed Frameworks */,
+				C65A8092261E23300077F02C /* Data.framework in Embed Frameworks */,
+				C65A808E261E23300077F02C /* Application.framework in Embed Frameworks */,
+				C65A809A261E23300077F02C /* Infra.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +241,11 @@
 		C65A803D261E12480077F02C /* AirportsMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapRouter.swift; sourceTree = "<group>"; };
 		C65A8044261E13D20077F02C /* AirportsMapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapModels.swift; sourceTree = "<group>"; };
 		C65A804B261E1FBE0077F02C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C65A805B261E21D40077F02C /* SchipholAirportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchipholAirportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65A805D261E21D40077F02C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C65A8066261E21D60077F02C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C65A8069261E21D60077F02C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C65A806B261E21D60077F02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,12 +311,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C65A8058261E21D40077F02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65A8095261E23300077F02C /* Domain.framework in Frameworks */,
+				C65A8091261E23300077F02C /* Data.framework in Frameworks */,
+				C65A808D261E23300077F02C /* Application.framework in Frameworks */,
+				C65A8099261E23300077F02C /* Infra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C632E5D3261CDD220033656B = {
 			isa = PBXGroup;
 			children = (
+				C65A805C261E21D40077F02C /* SchipholAirportApp */,
 				C632E5F0261CDEAD0033656B /* Domain */,
 				C632E60D261CE1B20033656B /* Data */,
 				C65A7F1C261CF3E20077F02C /* DataTests */,
@@ -283,6 +353,7 @@
 				C65A7FAA261D06540077F02C /* UseCasesIntegrationTests.xctest */,
 				C65A7FF9261E10600077F02C /* Application.framework */,
 				C65A8001261E10600077F02C /* ApplicationTests.xctest */,
+				C65A805B261E21D40077F02C /* SchipholAirportApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -496,6 +567,17 @@
 			path = AirportsMap;
 			sourceTree = "<group>";
 		};
+		C65A805C261E21D40077F02C /* SchipholAirportApp */ = {
+			isa = PBXGroup;
+			children = (
+				C65A805D261E21D40077F02C /* AppDelegate.swift */,
+				C65A8066261E21D60077F02C /* Assets.xcassets */,
+				C65A8068261E21D60077F02C /* LaunchScreen.storyboard */,
+				C65A806B261E21D60077F02C /* Info.plist */,
+			);
+			path = SchipholAirportApp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -679,6 +761,28 @@
 			productReference = C65A8001261E10600077F02C /* ApplicationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C65A805A261E21D40077F02C /* SchipholAirportApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65A806C261E21D60077F02C /* Build configuration list for PBXNativeTarget "SchipholAirportApp" */;
+			buildPhases = (
+				C65A8057261E21D40077F02C /* Sources */,
+				C65A8058261E21D40077F02C /* Frameworks */,
+				C65A8059261E21D40077F02C /* Resources */,
+				C65A809D261E23300077F02C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C65A8090261E23300077F02C /* PBXTargetDependency */,
+				C65A8094261E23300077F02C /* PBXTargetDependency */,
+				C65A8098261E23300077F02C /* PBXTargetDependency */,
+				C65A809C261E23300077F02C /* PBXTargetDependency */,
+			);
+			name = SchipholAirportApp;
+			productName = SchipholAirportApp;
+			productReference = C65A805B261E21D40077F02C /* SchipholAirportApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -717,6 +821,9 @@
 					C65A8000261E10600077F02C = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					C65A805A261E21D40077F02C = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = C632E5D7261CDD220033656B /* Build configuration list for PBXProject "SchipholAirport" */;
@@ -732,6 +839,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				C65A805A261E21D40077F02C /* SchipholAirportApp */,
 				C632E5EE261CDEAD0033656B /* Domain */,
 				C632E60B261CE1B20033656B /* Data */,
 				C65A7F1A261CF3E20077F02C /* DataTests */,
@@ -798,6 +906,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65A8059261E21D40077F02C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65A806A261E21D60077F02C /* LaunchScreen.storyboard in Resources */,
+				C65A8067261E21D60077F02C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +1015,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C65A8057261E21D40077F02C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65A805E261E21D40077F02C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -932,7 +1057,38 @@
 			target = C632E5EE261CDEAD0033656B /* Domain */;
 			targetProxy = C65A801E261E10BC0077F02C /* PBXContainerItemProxy */;
 		};
+		C65A8090261E23300077F02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65A7FF8261E10600077F02C /* Application */;
+			targetProxy = C65A808F261E23300077F02C /* PBXContainerItemProxy */;
+		};
+		C65A8094261E23300077F02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C632E60B261CE1B20033656B /* Data */;
+			targetProxy = C65A8093261E23300077F02C /* PBXContainerItemProxy */;
+		};
+		C65A8098261E23300077F02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C632E5EE261CDEAD0033656B /* Domain */;
+			targetProxy = C65A8097261E23300077F02C /* PBXContainerItemProxy */;
+		};
+		C65A809C261E23300077F02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65A7F57261D01F30077F02C /* Infra */;
+			targetProxy = C65A809B261E23300077F02C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C65A8068261E21D60077F02C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C65A8069261E21D60077F02C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C632E5E3261CDD220033656B /* Debug */ = {
@@ -1402,6 +1558,42 @@
 			};
 			name = Release;
 		};
+		C65A806D261E21D60077F02C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SchipholAirportApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matheusvds.SchipholAirportApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C65A806E261E21D60077F02C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SchipholAirportApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matheusvds.SchipholAirportApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1482,6 +1674,15 @@
 			buildConfigurations = (
 				C65A800C261E10610077F02C /* Debug */,
 				C65A800D261E10610077F02C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65A806C261E21D60077F02C /* Build configuration list for PBXNativeTarget "SchipholAirportApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65A806D261E21D60077F02C /* Debug */,
+				C65A806E261E21D60077F02C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
