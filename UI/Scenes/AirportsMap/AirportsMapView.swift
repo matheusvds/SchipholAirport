@@ -6,10 +6,17 @@ public protocol AirportMapViewLogic {
     func set(airportsMapViewModel: AirportsMapViewModelRepresentable)
 }
 
+public protocol AirportsMapViewDelegate: NSObject {
+    func didSelect(_ airportLocation: AirportLocationRepresentable)
+}
+
 public final class AirportsMapView: UIView {
+    
+    public weak var delegate: AirportsMapViewDelegate?
     
     lazy var mapView: MKMapView = {
         let view = MKMapView()
+        view.delegate = self
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -39,6 +46,16 @@ extension AirportsMapView: AirportMapViewLogic {
         }
     }
     
+    
+}
+
+extension AirportsMapView: MKMapViewDelegate {
+    
+    public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let airportLocation = view.annotation as? AirportLocation {
+            self.delegate?.didSelect(airportLocation)
+        }
+    }
 }
 
 extension AirportsMapView: ViewCode {

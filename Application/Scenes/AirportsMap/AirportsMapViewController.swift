@@ -43,3 +43,9 @@ extension AirportsMapViewController: AirportsMapDisplayLogic {
     }
 
 }
+
+extension AirportsMapViewController: AirportsMapViewDelegate {
+    func didSelect(_ airportLocation: AirportLocationRepresentable) {
+        
+    }
+}

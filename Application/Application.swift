@@ -35,6 +35,7 @@ public class Main: Application {
         let view = AirportsMapView()
         let viewController = AirportsMapViewController(interactor: interactor, viewLogic: view)
         
+        view.delegate = viewController
         presenter.displayLogic = viewController
         interactor.presenter = presenter
         
