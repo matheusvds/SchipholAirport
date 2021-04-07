@@ -3,10 +3,10 @@ import Foundation
 public typealias Flights = [Flight]
 
 public struct Flight: Model {
-    let airlineId: String
-    let flightNumber: Int
-    let departureAirportId: String
-    let arrivalAirportId: String
+    public let airlineId: String
+    public let flightNumber: Int
+    public let departureAirportId: String
+    public let arrivalAirportId: String
 
 }
 
