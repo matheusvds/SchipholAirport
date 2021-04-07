@@ -21,5 +21,22 @@ class UseCasesIntegrationTests: XCTestCase {
         
         waitForExpectations(timeout: 5.0)
     }
+    
+    func test_get_flights() {
+        let urlSessionAdapter = URLSessionAdapter()
+        let sut = RemoteGetFlights(httpClient: urlSessionAdapter)
+
+        let expect = expectation(description: "waiting")
+        
+        sut.getFlights(getFlightsModel: GetFlightsModel()) {
+            switch $0 {
+            case .success(let flights): XCTAssertFalse(flights.isEmpty)
+            case .failure: XCTFail("expecting success, got \($0)")
+            }
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5.0)
+    }
 
 }
