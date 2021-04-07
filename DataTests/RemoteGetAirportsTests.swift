@@ -82,6 +82,19 @@ class RemoteGetAirportsTests: XCTestCase {
         httpSpy.complete(withError: .badRequest)
         XCTAssertEqual(httpSpy.requests.first?.url?.absoluteString, "https://flightassets.datasavannah.com/test/airports.json")
     }
+    
+    func test_sut_should_not_complete_when_sut_is_deallocated() {
+        let httpClientSpy = HttpClientSpy()
+        var sut: RemoteGetAirports? = RemoteGetAirports(httpClient: httpClientSpy)
+        var receivedResult: Result<Airports, GetAirportError>?
+        
+        sut?.getAirports(getAirportsModel: GetAirportsModel()) { receivedResult = $0 }
+        sut = nil
+
+        httpClientSpy.complete(withError: .noConnection)
+        
+        XCTAssertNil(receivedResult)
+    }
 }
 
 // MARK: - Helper Methods
