@@ -1,8 +1,9 @@
 import Foundation
 import Domain
 import CoreLocation
+import UI
 
-typealias DisplayedAirport = AirportsMap.GetAirports.ViewModel.DisplayedAirport
+typealias DisplayedLocations = AirportsMap.GetAirports.ViewModel.DisplayedLocations
 
 enum AirportsMap {
     
@@ -16,9 +17,9 @@ enum AirportsMap {
         
         struct ViewModel {
             
-            let items: [DisplayedAirport]
+            let items: [DisplayedLocations]
             
-            struct DisplayedAirport {
+            struct DisplayedLocations {
                 let id: String
                 let location: CLLocation
             }

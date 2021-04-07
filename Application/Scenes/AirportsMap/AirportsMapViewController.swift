@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import UI
 
 protocol AirportsMapDisplayLogic: AnyObject {
     func displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel)
@@ -8,15 +9,21 @@ protocol AirportsMapDisplayLogic: AnyObject {
 final class AirportsMapViewController: UIViewController {
     
     let interactor: AirportsMapBusinessLogic
+    let viewLogic: AirportMapViewLogic
     
     // MARK: - Lifecycle
-    init(interactor: AirportsMapBusinessLogic) {
+    init(interactor: AirportsMapBusinessLogic, viewLogic: AirportMapViewLogic) {
         self.interactor = interactor
+        self.viewLogic = viewLogic
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        view = viewLogic.view
     }
     
     override func viewDidLoad() {
@@ -32,7 +39,8 @@ final class AirportsMapViewController: UIViewController {
 extension AirportsMapViewController: AirportsMapDisplayLogic {
     
     func displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel) {
-        print(viewModel)
+        let items = viewModel.items.map { AirportLocation(id: $0.id, coordinate: $0.location.coordinate) }
+        viewLogic.set(airportsMapViewModel: AirportsMapViewModel(items: items))
     }
 
 }

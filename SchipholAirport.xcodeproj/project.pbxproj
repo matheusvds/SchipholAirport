@@ -65,6 +65,13 @@
 		C65A8096261E23300077F02C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C632E5EF261CDEAD0033656B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C65A8099261E23300077F02C /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65A7F58261D01F30077F02C /* Infra.framework */; };
 		C65A809A261E23300077F02C /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65A7F58261D01F30077F02C /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C65A80BA261E25290077F02C /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65A80B3261E25290077F02C /* UI.framework */; };
+		C65A80BB261E25290077F02C /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65A80B3261E25290077F02C /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C65A80C5261E256D0077F02C /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65A80B3261E25290077F02C /* UI.framework */; platformFilter = ios; };
+		C65A80C6261E256D0077F02C /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65A80B3261E25290077F02C /* UI.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C65A80D9261E25DE0077F02C /* AirportsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A80D8261E25DE0077F02C /* AirportsMapView.swift */; };
+		C65A80E1261E25FE0077F02C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A80E0261E25FE0077F02C /* ViewCode.swift */; };
+		C65A80EF261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A80EE261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +145,20 @@
 			remoteGlobalIDString = C65A7F57261D01F30077F02C;
 			remoteInfo = Infra;
 		};
+		C65A80B8261E25290077F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C632E5D4261CDD220033656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65A80B2261E25290077F02C;
+			remoteInfo = UI;
+		};
+		C65A80C7261E256D0077F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C632E5D4261CDD220033656B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C65A80B2261E25290077F02C;
+			remoteInfo = UI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,6 +190,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C65A80C6261E256D0077F02C /* UI.framework in Embed Frameworks */,
 				C65A801D261E10BC0077F02C /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -181,6 +203,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C65A8096261E23300077F02C /* Domain.framework in Embed Frameworks */,
+				C65A80BB261E25290077F02C /* UI.framework in Embed Frameworks */,
 				C65A8092261E23300077F02C /* Data.framework in Embed Frameworks */,
 				C65A808E261E23300077F02C /* Application.framework in Embed Frameworks */,
 				C65A809A261E23300077F02C /* Infra.framework in Embed Frameworks */,
@@ -246,6 +269,11 @@
 		C65A8066261E21D60077F02C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C65A8069261E21D60077F02C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C65A806B261E21D60077F02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65A80B3261E25290077F02C /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65A80B6261E25290077F02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C65A80D8261E25DE0077F02C /* AirportsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapView.swift; sourceTree = "<group>"; };
+		C65A80E0261E25FE0077F02C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		C65A80EE261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapViewModelRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65A80C5261E256D0077F02C /* UI.framework in Frameworks */,
 				C65A801C261E10BC0077F02C /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,9 +345,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C65A8095261E23300077F02C /* Domain.framework in Frameworks */,
+				C65A80BA261E25290077F02C /* UI.framework in Frameworks */,
 				C65A8091261E23300077F02C /* Data.framework in Frameworks */,
 				C65A808D261E23300077F02C /* Application.framework in Frameworks */,
 				C65A8099261E23300077F02C /* Infra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65A80B0261E25290077F02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +374,7 @@
 				C65A7F59261D01F30077F02C /* Infra */,
 				C65A7F64261D01F30077F02C /* InfraTests */,
 				C65A7FAB261D06540077F02C /* UseCasesIntegrationTests */,
+				C65A80B4261E25290077F02C /* UI */,
 				C632E5DE261CDD220033656B /* Products */,
 				C632E61D261CE25F0033656B /* Frameworks */,
 			);
@@ -354,6 +392,7 @@
 				C65A7FF9261E10600077F02C /* Application.framework */,
 				C65A8001261E10600077F02C /* ApplicationTests.xctest */,
 				C65A805B261E21D40077F02C /* SchipholAirportApp.app */,
+				C65A80B3261E25290077F02C /* UI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -578,6 +617,33 @@
 			path = SchipholAirportApp;
 			sourceTree = "<group>";
 		};
+		C65A80B4261E25290077F02C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C65A80E0261E25FE0077F02C /* ViewCode.swift */,
+				C65A80D5261E25B30077F02C /* Scenes */,
+				C65A80B6261E25290077F02C /* Info.plist */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C65A80D5261E25B30077F02C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C65A80D6261E25B80077F02C /* AirportsMap */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C65A80D6261E25B80077F02C /* AirportsMap */ = {
+			isa = PBXGroup;
+			children = (
+				C65A80D8261E25DE0077F02C /* AirportsMapView.swift */,
+				C65A80EE261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift */,
+			);
+			path = AirportsMap;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -603,6 +669,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C65A7FF4261E10600077F02C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65A80AE261E25290077F02C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -737,6 +810,7 @@
 			);
 			dependencies = (
 				C65A801F261E10BC0077F02C /* PBXTargetDependency */,
+				C65A80C8261E256D0077F02C /* PBXTargetDependency */,
 			);
 			name = Application;
 			productName = Application;
@@ -777,11 +851,30 @@
 				C65A8094261E23300077F02C /* PBXTargetDependency */,
 				C65A8098261E23300077F02C /* PBXTargetDependency */,
 				C65A809C261E23300077F02C /* PBXTargetDependency */,
+				C65A80B9261E25290077F02C /* PBXTargetDependency */,
 			);
 			name = SchipholAirportApp;
 			productName = SchipholAirportApp;
 			productReference = C65A805B261E21D40077F02C /* SchipholAirportApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C65A80B2261E25290077F02C /* UI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C65A80BC261E25290077F02C /* Build configuration list for PBXNativeTarget "UI" */;
+			buildPhases = (
+				C65A80AE261E25290077F02C /* Headers */,
+				C65A80AF261E25290077F02C /* Sources */,
+				C65A80B0261E25290077F02C /* Frameworks */,
+				C65A80B1261E25290077F02C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UI;
+			productName = UI;
+			productReference = C65A80B3261E25290077F02C /* UI.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -824,6 +917,10 @@
 					C65A805A261E21D40077F02C = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					C65A80B2261E25290077F02C = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
 				};
 			};
 			buildConfigurationList = C632E5D7261CDD220033656B /* Build configuration list for PBXProject "SchipholAirport" */;
@@ -848,6 +945,7 @@
 				C65A7FA9261D06540077F02C /* UseCasesIntegrationTests */,
 				C65A7FF8261E10600077F02C /* Application */,
 				C65A8000261E10600077F02C /* ApplicationTests */,
+				C65A80B2261E25290077F02C /* UI */,
 			);
 		};
 /* End PBXProject section */
@@ -915,6 +1013,13 @@
 			files = (
 				C65A806A261E21D60077F02C /* LaunchScreen.storyboard in Resources */,
 				C65A8067261E21D60077F02C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65A80B1261E25290077F02C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1128,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C65A80AF261E25290077F02C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65A80D9261E25DE0077F02C /* AirportsMapView.swift in Sources */,
+				C65A80EF261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift in Sources */,
+				C65A80E1261E25FE0077F02C /* ViewCode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1076,6 +1191,17 @@
 			isa = PBXTargetDependency;
 			target = C65A7F57261D01F30077F02C /* Infra */;
 			targetProxy = C65A809B261E23300077F02C /* PBXContainerItemProxy */;
+		};
+		C65A80B9261E25290077F02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C65A80B2261E25290077F02C /* UI */;
+			targetProxy = C65A80B8261E25290077F02C /* PBXContainerItemProxy */;
+		};
+		C65A80C8261E256D0077F02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = C65A80B2261E25290077F02C /* UI */;
+			targetProxy = C65A80C7261E256D0077F02C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1561,6 +1687,7 @@
 		C65A806D261E21D60077F02C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1579,6 +1706,7 @@
 		C65A806E261E21D60077F02C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1589,6 +1717,57 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheusvds.SchipholAirportApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C65A80BD261E25290077F02C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matheusvds.UI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C65A80BE261E25290077F02C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matheusvds.UI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1683,6 +1862,15 @@
 			buildConfigurations = (
 				C65A806D261E21D60077F02C /* Debug */,
 				C65A806E261E21D60077F02C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C65A80BC261E25290077F02C /* Build configuration list for PBXNativeTarget "UI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C65A80BD261E25290077F02C /* Debug */,
+				C65A80BE261E25290077F02C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

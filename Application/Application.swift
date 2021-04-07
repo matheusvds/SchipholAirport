@@ -1,6 +1,7 @@
 import Foundation
 import Domain
 import UIKit
+import UI
 
 public protocol Application {
     func start()
@@ -31,7 +32,8 @@ public class Main: Application {
     private func makeAirportsMap() -> AirportsMapViewController {
         let presenter = AirportsMapPresenter()
         let interactor = AirportsMapInteractor(getAirports: getAirports)
-        let viewController = AirportsMapViewController(interactor: interactor)
+        let view = AirportsMapView()
+        let viewController = AirportsMapViewController(interactor: interactor, viewLogic: view)
         
         presenter.displayLogic = viewController
         interactor.presenter = presenter

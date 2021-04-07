@@ -16,7 +16,7 @@ extension AirportsMapPresenter: AirportsMapPresentationLogic {
         guard let airports = response.airports else { return }
         
         let locations = airports.map {
-            DisplayedAirport(
+            DisplayedLocations(
                 id: $0.id,
                 location: CLLocation(latitude: $0.latitude, longitude: $0.longitude)
             )
