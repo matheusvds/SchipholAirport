@@ -10,4 +10,3 @@ public struct Airport: Model {
     let city: String
     let countryId: String
 }
-

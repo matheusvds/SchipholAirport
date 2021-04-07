@@ -86,7 +86,7 @@ class RemoteGetAirportsTests: XCTestCase {
     func test_sut_should_not_complete_when_sut_is_deallocated() {
         let httpClientSpy = HttpClientSpy()
         var sut: RemoteGetAirports? = RemoteGetAirports(httpClient: httpClientSpy)
-        var receivedResult: Result<Airports, GetAirportError>?
+        var receivedResult: Result<Airports, DomainError>?
         
         sut?.getAirports(getAirportsModel: GetAirportsModel()) { receivedResult = $0 }
         sut = nil
@@ -109,7 +109,7 @@ extension RemoteGetAirportsTests {
     
     func expect(
         _ sut: RemoteGetAirports,
-        completeWith expectedResult: Result<Airports, GetAirportError>,
+        completeWith expectedResult: Result<Airports, DomainError>,
         when action: () -> Void,
         file: StaticString = #file,
         line: UInt = #line

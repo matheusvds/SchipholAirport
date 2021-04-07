@@ -26,6 +26,11 @@ func makeGetAirports() -> Airports {
     return airports!
 }
 
+func makeFlights() -> Flights {
+    let flights: Flights? = getFlightsJSON.data(using: .utf8)?.toModel()
+    return flights!
+}
+
 func makeInvalidData() -> Data {
     return Data("invalid data".utf8)
 }

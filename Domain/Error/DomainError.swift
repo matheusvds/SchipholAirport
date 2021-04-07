@@ -1,6 +1,6 @@
 import Foundation
 
-public enum GetAirportError: Error {
+public enum DomainError: Error {
     case notFound
     case dataConsistency
 }
