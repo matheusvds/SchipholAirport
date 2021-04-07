@@ -6,7 +6,7 @@ public protocol AirportsMapViewModelRepresentable {
 }
 
 public protocol AirportLocationRepresentable: MKAnnotation {
-    var id: String { get }
+
 }
 
 public struct AirportsMapViewModel: AirportsMapViewModelRepresentable {
@@ -18,11 +18,13 @@ public struct AirportsMapViewModel: AirportsMapViewModelRepresentable {
 }
 
 public final class AirportLocation: NSObject, AirportLocationRepresentable {
-    public let id: String
     public let coordinate: CLLocationCoordinate2D
+    public let title: String?
+    public var subtitle: String?
     
-    public init(id: String, coordinate: CLLocationCoordinate2D) {
-        self.id = id
+    public init(title: String, subtitle: String, coordinate: CLLocationCoordinate2D) {
         self.coordinate = coordinate
+        self.title = title
+        self.subtitle = subtitle
     }
 }

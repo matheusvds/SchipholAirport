@@ -17,7 +17,8 @@ extension AirportsMapPresenter: AirportsMapPresentationLogic {
         
         let locations = airports.map {
             DisplayedLocations(
-                id: $0.id,
+                title: $0.id,
+                subtitle: $0.city,
                 coordinate: CLLocation(latitude: $0.latitude, longitude: $0.longitude).coordinate
             )
         }
