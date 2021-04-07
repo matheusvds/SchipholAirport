@@ -39,8 +39,7 @@ final class AirportsMapViewController: UIViewController {
 extension AirportsMapViewController: AirportsMapDisplayLogic {
     
     func displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel) {
-        let items = viewModel.items.map { AirportLocation(id: $0.id, coordinate: $0.location.coordinate) }
-        viewLogic.set(airportsMapViewModel: AirportsMapViewModel(items: items))
+        viewLogic.set(airportsMapViewModel: viewModel)
     }
 
 }

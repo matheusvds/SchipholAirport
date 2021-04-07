@@ -3,7 +3,7 @@ import Domain
 import CoreLocation
 import UI
 
-typealias DisplayedLocations = AirportsMap.GetAirports.ViewModel.DisplayedLocations
+typealias DisplayedLocations = UI.AirportLocation
 
 enum AirportsMap {
     
@@ -15,14 +15,6 @@ enum AirportsMap {
             let airports: Airports?
         }
         
-        struct ViewModel {
-            
-            let items: [DisplayedLocations]
-            
-            struct DisplayedLocations {
-                let id: String
-                let location: CLLocation
-            }
-        }
+        typealias ViewModel = AirportsMapViewModel
     }
 }
