@@ -4,6 +4,8 @@ import UIKit
 public protocol ReachableAirportsViewLogic {
     var view: UIView { get }
     func set(viewModel: ReachableAirportsViewModelRepresentable)
+    func startLoading(at viewController: UIViewController)
+    func stopLoading(at viewController: UIViewController, completion: (() -> Void)?)
 }
 
 public final class ReachableAirportsView: UIView {
@@ -30,7 +32,7 @@ public final class ReachableAirportsView: UIView {
 }
 
 extension ReachableAirportsView: ReachableAirportsViewLogic {
-    
+
     public var view: UIView {
         return self
     }
@@ -40,6 +42,14 @@ extension ReachableAirportsView: ReachableAirportsViewLogic {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+    
+    public func startLoading(at viewController: UIViewController) {
+        viewController.presentLoading()
+    }
+    
+    public func stopLoading(at viewController: UIViewController, completion: (() -> Void)? = nil) {
+        viewController.dismissLoading(completion: completion)
     }
 }
  
