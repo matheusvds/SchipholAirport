@@ -42,3 +42,9 @@ func makeError() -> Error {
 struct DummyDecodable: Codable, Equatable {
     let property: String
 }
+
+private extension Data {
+    func toModel<T: Decodable>() -> T? {
+        return try? JSONDecoder().decode(T.self, from: self)
+    }
+}
