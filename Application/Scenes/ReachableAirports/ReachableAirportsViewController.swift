@@ -34,7 +34,7 @@ final class ReachableAirportsViewController: UIViewController {
     }
     
     private func setup() {
-        title = "Airports"
+        title = "Closest Airports"
     }
     
     private func start() {
