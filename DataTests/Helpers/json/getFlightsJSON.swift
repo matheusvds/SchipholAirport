@@ -21,7 +21,14 @@ let getFlightsJSON =
       "flightNumber":1241,
       "departureAirportId":"AMS",
       "arrivalAirportId":"CDG"
+   },
+   {
+      "airlineId": "HV",
+      "flightNumber": 553,
+      "departureAirportId": "AMS",
+      "arrivalAirportId": "RTM"
    }
+    
 ]
 
 """

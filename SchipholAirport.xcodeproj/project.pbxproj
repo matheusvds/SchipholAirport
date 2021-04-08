@@ -108,6 +108,8 @@
 		C65A82E2261FBAAA0077F02C /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A7F3E261CF6D30077F02C /* TestFactory.swift */; };
 		C65A82EA261FBDE10077F02C /* ReachableAirportPresentationLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A82E9261FBDE10077F02C /* ReachableAirportPresentationLogicSpy.swift */; };
 		C65A82F8261FBE0F0077F02C /* GetFlightsSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A82F7261FBE0F0077F02C /* GetFlightsSpy.swift */; };
+		C65A8300261FBE670077F02C /* ReachableAirportsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A82FF261FBE670077F02C /* ReachableAirportsPresenterTests.swift */; };
+		C65A8308261FC29F0077F02C /* ReachableAirportsDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8307261FC29F0077F02C /* ReachableAirportsDisplayLogicSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +340,8 @@
 		C65A8296261FB8340077F02C /* ReachableAirportsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsInteractorTests.swift; sourceTree = "<group>"; };
 		C65A82E9261FBDE10077F02C /* ReachableAirportPresentationLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportPresentationLogicSpy.swift; sourceTree = "<group>"; };
 		C65A82F7261FBE0F0077F02C /* GetFlightsSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlightsSpy.swift; sourceTree = "<group>"; };
+		C65A82FF261FBE670077F02C /* ReachableAirportsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsPresenterTests.swift; sourceTree = "<group>"; };
+		C65A8307261FC29F0077F02C /* ReachableAirportsDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsDisplayLogicSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +791,7 @@
 				C65A828D261FB7940077F02C /* ReachableAirportsRouterLogicDummy.swift */,
 				C65A82E9261FBDE10077F02C /* ReachableAirportPresentationLogicSpy.swift */,
 				C65A82F7261FBE0F0077F02C /* GetFlightsSpy.swift */,
+				C65A8307261FC29F0077F02C /* ReachableAirportsDisplayLogicSpy.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -796,6 +801,7 @@
 			children = (
 				C65A8268261FB4880077F02C /* ReachableAirportsViewControllerTests.swift */,
 				C65A8296261FB8340077F02C /* ReachableAirportsInteractorTests.swift */,
+				C65A82FF261FBE670077F02C /* ReachableAirportsPresenterTests.swift */,
 			);
 			path = ReachableAirports;
 			sourceTree = "<group>";
@@ -1287,6 +1293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65A8308261FC29F0077F02C /* ReachableAirportsDisplayLogicSpy.swift in Sources */,
 				C65A82E2261FBAAA0077F02C /* TestFactory.swift in Sources */,
 				C65A82AB261FB8930077F02C /* getFlightsJSON.swift in Sources */,
 				C65A8269261FB4880077F02C /* ReachableAirportsViewControllerTests.swift in Sources */,
@@ -1299,6 +1306,7 @@
 				C65A82B9261FB8970077F02C /* getAirportsJSON.swift in Sources */,
 				C65A82EA261FBDE10077F02C /* ReachableAirportPresentationLogicSpy.swift in Sources */,
 				C65A8007261E10600077F02C /* ApplicationTests.swift in Sources */,
+				C65A8300261FBE670077F02C /* ReachableAirportsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

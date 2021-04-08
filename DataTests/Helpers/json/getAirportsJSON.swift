@@ -27,6 +27,22 @@ let getAirportsJSON =
       "name": "Dyce Airport",
       "city": "Aberdeen",
       "countryId": "GB"
+    },
+    {
+      "id": "AMS",
+      "latitude": 52.30907,
+      "longitude": 4.763385,
+      "name": "Amsterdam-Schiphol Airport",
+      "city": "Amsterdam",
+      "countryId": "NL"
+    },
+    {
+      "id": "RTM",
+      "latitude": 51.948948,
+      "longitude": 4.433606,
+      "name": "Rotterdam The Hague Airport",
+      "city": "Rotterdam",
+      "countryId": "NL"
     }
 ]
 
