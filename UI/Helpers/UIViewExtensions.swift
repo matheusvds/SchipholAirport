@@ -11,3 +11,5 @@ extension UIView {
     }
 
 }
+
+extension UITableViewCell: Identifiable { }

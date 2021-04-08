@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import UI
 
 protocol ReachableAirportsDisplayLogic: AnyObject {
     func displayClosestsAirports(viewModel: ReachableAirports.GetAirports.ViewModel)
@@ -8,12 +9,18 @@ protocol ReachableAirportsDisplayLogic: AnyObject {
 final class ReachableAirportsViewController: UIViewController {
     
     private let interactor: ReachableAirportsBusinessLogic
+    let viewLogic: ReachableAirportsViewLogic
     let router: ReachableAirportsRouterLogic
     
-    init(interactor: ReachableAirportsBusinessLogic, router: ReachableAirportsRouterLogic) {
+    init(interactor: ReachableAirportsBusinessLogic, viewLogic: ReachableAirportsViewLogic, router: ReachableAirportsRouterLogic) {
         self.interactor = interactor
+        self.viewLogic = viewLogic
         self.router = router
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func loadView() {
+        view = viewLogic.view
     }
     
     override func viewDidLoad() {
@@ -39,7 +46,7 @@ final class ReachableAirportsViewController: UIViewController {
 extension ReachableAirportsViewController: ReachableAirportsDisplayLogic {
     
     func displayClosestsAirports(viewModel: ReachableAirports.GetAirports.ViewModel) {
-        print(viewModel)
+        viewLogic.set(viewModel: viewModel)
     }
     
 }

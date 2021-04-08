@@ -69,8 +69,9 @@ final public class SceneFactory: SceneFactoryRepresentable, ReachableAirportsDat
     public func makeReachableAirportScene() -> UIViewController {
         let presenter = ReachableAirportsPresenter()
         let interactor = ReachableAirportsInteractor(getFlights: getFlights)
+        let view = ReachableAirportsView()
         let router = ReachableAirportsRouter()
-        let viewController = ReachableAirportsViewController(interactor: interactor, router: router)
+        let viewController = ReachableAirportsViewController(interactor: interactor, viewLogic: view, router: router)
         
         router.dataStore = interactor
         router.viewController = viewController
