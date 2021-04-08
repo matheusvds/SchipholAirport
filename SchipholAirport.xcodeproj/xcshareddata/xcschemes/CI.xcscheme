@@ -121,6 +121,20 @@
             BlueprintName = "Infra"
             ReferencedContainer = "container:SchipholAirport.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C65A7FF8261E10600077F02C"
+            BuildableName = "Application.framework"
+            BlueprintName = "Application"
+            ReferencedContainer = "container:SchipholAirport.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C65A80B2261E25290077F02C"
+            BuildableName = "UI.framework"
+            BlueprintName = "UI"
+            ReferencedContainer = "container:SchipholAirport.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
@@ -150,6 +164,16 @@
                BlueprintIdentifier = "C65A7FA9261D06540077F02C"
                BuildableName = "UseCasesIntegrationTests.xctest"
                BlueprintName = "UseCasesIntegrationTests"
+               ReferencedContainer = "container:SchipholAirport.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C65A8000261E10600077F02C"
+               BuildableName = "ApplicationTests.xctest"
+               BlueprintName = "ApplicationTests"
                ReferencedContainer = "container:SchipholAirport.xcodeproj">
             </BuildableReference>
          </TestableReference>
