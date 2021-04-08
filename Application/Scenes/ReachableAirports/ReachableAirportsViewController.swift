@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 protocol ReachableAirportsDisplayLogic: AnyObject {
-    
+    func displayClosestsAirports(viewModel: ReachableAirports.GetAirports.ViewModel)
 }
 
 final class ReachableAirportsViewController: UIViewController {
@@ -31,12 +31,16 @@ final class ReachableAirportsViewController: UIViewController {
     }
     
     private func start() {
-        interactor.fetchFlights(request: ReachableAirports.GetFlights.Request())
+        interactor.fetchClosestsAirports(request: ReachableAirports.GetAirports.Request())
     }
     
 }
 
 extension ReachableAirportsViewController: ReachableAirportsDisplayLogic {
+    
+    func displayClosestsAirports(viewModel: ReachableAirports.GetAirports.ViewModel) {
+        print(viewModel)
+    }
     
 }
 

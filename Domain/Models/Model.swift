@@ -1,3 +1,3 @@
 import Foundation
 
-typealias Model = Codable & Equatable
+typealias Model = Codable & Equatable & Hashable

@@ -1,17 +1,29 @@
 import Foundation
 import Domain
 
+typealias DisplayedItems = ReachableAirports.GetAirports.ViewModel.Item
+
 enum ReachableAirports {
     
-    enum GetFlights {
+    enum GetAirports {
         
         struct Request {}
         
         struct Response {
-            let flights: Flights
+            let flights: Flights?
+            let airports: Airports?
         }
         
-        struct ViewModel {}
+        struct ViewModel {
+            
+            let items: [Item]
+            
+            struct Item {
+                let id: String
+                let name: String
+                let distance: String
+            }
+        }
         
     }
     
