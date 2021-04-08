@@ -19,7 +19,7 @@ extension UIViewController {
         alert.view.addSubview(loadingIndicator)
         
         DispatchQueue.main.async { [weak self] in
-            self?.navigationController?.present(alert, animated: true, completion: nil)
+            self?.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -27,7 +27,7 @@ extension UIViewController {
     /// Used to dismissLoading
     func dismissLoading(completion: (() -> Void)? = nil) {
         DispatchQueue.main.async { [weak self] in
-            self?.presentedViewController?.dismiss(animated: true, completion: completion)
+            self?.dismiss(animated: true, completion: completion)
         }
     }
 }

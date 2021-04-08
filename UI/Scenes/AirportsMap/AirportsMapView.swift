@@ -1,7 +1,9 @@
 import Foundation
 import MapKit
 
-public protocol AirportsMapViewLogic {
+public typealias AirportsMapViewLogic = AirportsMapViewRepresentable & ViewLoadingEvents
+
+public protocol AirportsMapViewRepresentable {
     var view: UIView { get }
     func set(airportsMapViewModel: AirportsMapViewModelRepresentable)
     func getSelectedLocation() -> AirportLocation?

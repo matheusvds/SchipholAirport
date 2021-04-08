@@ -34,6 +34,7 @@ final class AirportsMapViewController: UIViewController {
     }
     
     private func start() {
+        viewLogic.startLoading(at: self)
         interactor.fetchAirports(request: AirportsMap.GetAirports.Request())
     }
 }
@@ -42,6 +43,7 @@ extension AirportsMapViewController: AirportsMapDisplayLogic {
     
     func displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel) {
         router?.routeDataToReachableAirports()
+        viewLogic.stopLoading(at: self)
         viewLogic.set(airportsMapViewModel: viewModel)
     }
 

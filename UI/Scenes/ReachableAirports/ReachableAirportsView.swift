@@ -1,11 +1,11 @@
 import Foundation
 import UIKit
 
-public protocol ReachableAirportsViewLogic {
+public typealias ReachableAirportsViewLogic = ReachableAirportsViewRepresentable & ViewLoadingEvents
+
+public protocol ReachableAirportsViewRepresentable {
     var view: UIView { get }
     func set(viewModel: ReachableAirportsViewModelRepresentable)
-    func startLoading(at viewController: UIViewController)
-    func stopLoading(at viewController: UIViewController, completion: (() -> Void)?)
 }
 
 public final class ReachableAirportsView: UIView {
@@ -42,14 +42,6 @@ extension ReachableAirportsView: ReachableAirportsViewLogic {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
-    }
-    
-    public func startLoading(at viewController: UIViewController) {
-        viewController.presentLoading()
-    }
-    
-    public func stopLoading(at viewController: UIViewController, completion: (() -> Void)? = nil) {
-        viewController.dismissLoading(completion: completion)
     }
 }
  
