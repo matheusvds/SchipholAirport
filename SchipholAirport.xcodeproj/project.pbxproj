@@ -93,6 +93,10 @@
 		C65A824A261FA4FF0077F02C /* ViewLoadingEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8249261FA4FF0077F02C /* ViewLoadingEvents.swift */; };
 		C65A8258261FA85D0077F02C /* ReachableAirportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8257261FA85D0077F02C /* ReachableAirportCell.swift */; };
 		C65A8260261FB3A30077F02C /* AirportDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A825F261FB3A30077F02C /* AirportDetailBottomView.swift */; };
+		C65A8269261FB4880077F02C /* ReachableAirportsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8268261FB4880077F02C /* ReachableAirportsViewControllerTests.swift */; };
+		C65A8278261FB7800077F02C /* ReachableAirportsBusinessLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8277261FB7800077F02C /* ReachableAirportsBusinessLogicSpy.swift */; };
+		C65A8286261FB78B0077F02C /* ReachableAirportsViewLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8285261FB78B0077F02C /* ReachableAirportsViewLogicSpy.swift */; };
+		C65A828E261FB7940077F02C /* ReachableAirportsRouterLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A828D261FB7940077F02C /* ReachableAirportsRouterLogicDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +320,10 @@
 		C65A8249261FA4FF0077F02C /* ViewLoadingEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadingEvents.swift; sourceTree = "<group>"; };
 		C65A8257261FA85D0077F02C /* ReachableAirportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportCell.swift; sourceTree = "<group>"; };
 		C65A825F261FB3A30077F02C /* AirportDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailBottomView.swift; sourceTree = "<group>"; };
+		C65A8268261FB4880077F02C /* ReachableAirportsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsViewControllerTests.swift; sourceTree = "<group>"; };
+		C65A8277261FB7800077F02C /* ReachableAirportsBusinessLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsBusinessLogicSpy.swift; sourceTree = "<group>"; };
+		C65A8285261FB78B0077F02C /* ReachableAirportsViewLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsViewLogicSpy.swift; sourceTree = "<group>"; };
+		C65A828D261FB7940077F02C /* ReachableAirportsRouterLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportsRouterLogicDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -623,6 +631,8 @@
 		C65A8005261E10600077F02C /* ApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
+				C65A8276261FB7670077F02C /* Shared */,
+				C65A8267261FB4750077F02C /* Scenes */,
 				C65A8006261E10600077F02C /* ApplicationTests.swift */,
 				C65A8008261E10600077F02C /* Info.plist */,
 			);
@@ -743,6 +753,32 @@
 				C65A821D261F8D1F0077F02C /* ReachableAirportsView.swift */,
 				C65A8225261F8DEF0077F02C /* ReachableAirportsViewModelRepresentable.swift */,
 				C65A8257261FA85D0077F02C /* ReachableAirportCell.swift */,
+			);
+			path = ReachableAirports;
+			sourceTree = "<group>";
+		};
+		C65A8267261FB4750077F02C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C65A8295261FB7F50077F02C /* ReachableAirports */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C65A8276261FB7670077F02C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C65A8277261FB7800077F02C /* ReachableAirportsBusinessLogicSpy.swift */,
+				C65A8285261FB78B0077F02C /* ReachableAirportsViewLogicSpy.swift */,
+				C65A828D261FB7940077F02C /* ReachableAirportsRouterLogicDummy.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C65A8295261FB7F50077F02C /* ReachableAirports */ = {
+			isa = PBXGroup;
+			children = (
+				C65A8268261FB4880077F02C /* ReachableAirportsViewControllerTests.swift */,
 			);
 			path = ReachableAirports;
 			sourceTree = "<group>";
@@ -1230,6 +1266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65A8269261FB4880077F02C /* ReachableAirportsViewControllerTests.swift in Sources */,
+				C65A8278261FB7800077F02C /* ReachableAirportsBusinessLogicSpy.swift in Sources */,
+				C65A8286261FB78B0077F02C /* ReachableAirportsViewLogicSpy.swift in Sources */,
+				C65A828E261FB7940077F02C /* ReachableAirportsRouterLogicDummy.swift in Sources */,
 				C65A8007261E10600077F02C /* ApplicationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
