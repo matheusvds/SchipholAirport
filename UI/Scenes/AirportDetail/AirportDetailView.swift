@@ -59,51 +59,7 @@ public final class AirportDetailView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    private lazy var airportID: UILabel = {
-        let view = UILabel()
-        view.text = "AMS"
-        view.textAlignment = .center
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemGray4
-        view.font = UIFont.systemFont(ofSize: 40, weight: .black)
-        return view
-    }()
-    
-    private lazy var nearestAirportNameTitle: UILabel = {
-        let view = UILabel()
-        view.text = "nearest airport"
-        view.font = UIFont.boldSystemFont(ofSize: 12)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
 
-    private lazy var nearestAirportName: UILabel = {
-        let view = UILabel()
-        view.text = "Norman International Airport"
-        view.numberOfLines = 0
-        view.font = UIFont.systemFont(ofSize: 13, weight: .light)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    private lazy var nearestAirportDistanceTitle: UILabel = {
-        let view = UILabel()
-        view.text = "distance to nearest airport"
-        view.font = UIFont.boldSystemFont(ofSize: 12)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    private lazy var nearestAirportDistance: UILabel = {
-        let view = UILabel()
-        view.text = "20 km"
-        view.font = UIFont.systemFont(ofSize: 13, weight: .light)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    
     private lazy var container: UIView = {
       let view = UIView()
         view.backgroundColor = .systemGray6
@@ -111,6 +67,12 @@ public final class AirportDetailView: UIView {
         view.layer.shadowOpacity = 1
         view.layer.shadowOffset = CGSize(width: 0, height: 5)
         view.layer.shadowRadius = 5
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var bottomContainer: AirportDetailBottomView = {
+        let view = AirportDetailBottomView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -141,9 +103,9 @@ extension AirportDetailView: AirportDetailViewLogic {
         self.location.text = viewModel.location
         self.city.text = viewModel.city
         self.countryId.text = viewModel.countryID
-        self.airportID.text = viewModel.airportID
-        self.nearestAirportName.text = viewModel.nearestAirport
-        self.nearestAirportDistance.text = viewModel.nearestAirportDistance
+        self.bottomContainer.airportID.text = viewModel.airportID
+        self.bottomContainer.nearestAirportName.text = viewModel.nearestAirport
+        self.bottomContainer.nearestAirportDistance.text = viewModel.nearestAirportDistance
     }
     
 }
@@ -158,11 +120,12 @@ extension AirportDetailView: ViewCode {
         container.addSubview(location)
         container.addSubview(city)
         container.addSubview(countryId)
-        container.addSubview(airportID)
-        container.addSubview(nearestAirportNameTitle)
-        container.addSubview(nearestAirportName)
-        container.addSubview(nearestAirportDistanceTitle)
-        container.addSubview(nearestAirportDistance)
+        container.addSubview(bottomContainer)
+//        container.addSubview(airportID)
+//        container.addSubview(nearestAirportNameTitle)
+//        container.addSubview(nearestAirportName)
+//        container.addSubview(nearestAirportDistanceTitle)
+//        container.addSubview(nearestAirportDistance)
     }
     
     func setupConstraints() {
@@ -171,7 +134,6 @@ extension AirportDetailView: ViewCode {
         let textSpacing: CGFloat = 10
         let padding: CGFloat = 20
         let topMargin: CGFloat = 24
-        let bottomMargin: CGFloat = 30
         
         NSLayoutConstraint.activate([
             container.topAnchor.constraint(equalTo: self.centerYAnchor),
@@ -183,6 +145,7 @@ extension AirportDetailView: ViewCode {
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: container.topAnchor, constant: topMargin),
             title.widthAnchor.constraint(equalTo: container.widthAnchor),
+            title.heightAnchor.constraint(greaterThanOrEqualToConstant: 50),
             title.centerXAnchor.constraint(equalTo: container.centerXAnchor)
         ])
         
@@ -215,32 +178,9 @@ extension AirportDetailView: ViewCode {
         ])
         
         NSLayoutConstraint.activate([
-            airportID.topAnchor.constraint(equalTo: city.bottomAnchor, constant: 2*textSpacing),
-            airportID.leadingAnchor.constraint(equalTo: airportName.leadingAnchor, constant: textSpacing),
-            airportID.heightAnchor.constraint(equalTo: airportID.widthAnchor),
-            airportID.widthAnchor.constraint(equalToConstant: 110),
-            airportID.bottomAnchor.constraint(greaterThanOrEqualTo: container.bottomAnchor, constant: -bottomMargin)
-        ])
-        
-        NSLayoutConstraint.activate([
-            nearestAirportNameTitle.topAnchor.constraint(equalTo: airportID.topAnchor),
-            nearestAirportNameTitle.leadingAnchor.constraint(equalTo: airportID.trailingAnchor, constant: textSpacing)
-        ])
-        
-        NSLayoutConstraint.activate([
-            nearestAirportName.topAnchor.constraint(equalTo: nearestAirportNameTitle.bottomAnchor, constant: textSpacing/3),
-            nearestAirportName.leadingAnchor.constraint(equalTo: nearestAirportNameTitle.leadingAnchor),
-            nearestAirportName.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -padding)
-        ])
-        
-        NSLayoutConstraint.activate([
-            nearestAirportDistanceTitle.topAnchor.constraint(equalTo: nearestAirportName.bottomAnchor, constant: textSpacing),
-            nearestAirportDistanceTitle.leadingAnchor.constraint(equalTo: nearestAirportName.leadingAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            nearestAirportDistance.topAnchor.constraint(equalTo: nearestAirportDistanceTitle.bottomAnchor, constant: textSpacing/3),
-            nearestAirportDistance.leadingAnchor.constraint(equalTo: nearestAirportDistanceTitle.leadingAnchor),
+            bottomContainer.topAnchor.constraint(equalTo: city.bottomAnchor, constant: 2*textSpacing),
+            bottomContainer.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            bottomContainer.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
 
     }

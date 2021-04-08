@@ -91,6 +91,8 @@
 		C65A822E261F90D50077F02C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A822D261F90D50077F02C /* Identifiable.swift */; };
 		C65A823C261FA14D0077F02C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A823B261FA14D0077F02C /* UIViewControllerExtensions.swift */; };
 		C65A824A261FA4FF0077F02C /* ViewLoadingEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8249261FA4FF0077F02C /* ViewLoadingEvents.swift */; };
+		C65A8258261FA85D0077F02C /* ReachableAirportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8257261FA85D0077F02C /* ReachableAirportCell.swift */; };
+		C65A8260261FB3A30077F02C /* AirportDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A825F261FB3A30077F02C /* AirportDetailBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,6 +314,8 @@
 		C65A822D261F90D50077F02C /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		C65A823B261FA14D0077F02C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C65A8249261FA4FF0077F02C /* ViewLoadingEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadingEvents.swift; sourceTree = "<group>"; };
+		C65A8257261FA85D0077F02C /* ReachableAirportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableAirportCell.swift; sourceTree = "<group>"; };
+		C65A825F261FB3A30077F02C /* AirportDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -705,6 +709,7 @@
 			children = (
 				C65A816A261E62A90077F02C /* AirportDetailView.swift */,
 				C65A819E261F520A0077F02C /* AirportDetailViewModelRepresentable.swift */,
+				C65A825F261FB3A30077F02C /* AirportDetailBottomView.swift */,
 			);
 			path = AirportDetail;
 			sourceTree = "<group>";
@@ -737,6 +742,7 @@
 			children = (
 				C65A821D261F8D1F0077F02C /* ReachableAirportsView.swift */,
 				C65A8225261F8DEF0077F02C /* ReachableAirportsViewModelRepresentable.swift */,
+				C65A8257261FA85D0077F02C /* ReachableAirportCell.swift */,
 			);
 			path = ReachableAirports;
 			sourceTree = "<group>";
@@ -1245,8 +1251,10 @@
 				C65A823C261FA14D0077F02C /* UIViewControllerExtensions.swift in Sources */,
 				C65A8191261F44230077F02C /* UIViewExtensions.swift in Sources */,
 				C65A8226261F8DEF0077F02C /* ReachableAirportsViewModelRepresentable.swift in Sources */,
+				C65A8258261FA85D0077F02C /* ReachableAirportCell.swift in Sources */,
 				C65A822E261F90D50077F02C /* Identifiable.swift in Sources */,
 				C65A819F261F520A0077F02C /* AirportDetailViewModelRepresentable.swift in Sources */,
+				C65A8260261FB3A30077F02C /* AirportDetailBottomView.swift in Sources */,
 				C65A816B261E62A90077F02C /* AirportDetailView.swift in Sources */,
 				C65A80EF261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift in Sources */,
 				C65A824A261FA4FF0077F02C /* ViewLoadingEvents.swift in Sources */,
