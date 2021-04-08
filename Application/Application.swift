@@ -19,9 +19,10 @@ public class Main: Application {
         let mapTab = makeAirportsMapTab()
         let listTab = makeReachableAirportsTab()
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let tabBar = UITabBarController()
-        tabBar.viewControllers = [mapTab, listTab]
-        window.rootViewController = tabBar
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.isTranslucent = true
+        tabBarController.viewControllers = [mapTab, listTab]
+        window.rootViewController = tabBarController
         self.window = window
         
         window.makeKeyAndVisible()
