@@ -1,13 +1,15 @@
 import Foundation
 import MapKit
 
-public protocol AirportMapViewLogic {
+public protocol AirportsMapViewLogic {
     var view: UIView { get }
     func set(airportsMapViewModel: AirportsMapViewModelRepresentable)
+    func getSelectedLocation() -> AirportLocation?
+    func clearSelection()
 }
 
-public protocol AirportsMapViewDelegate: NSObject {
-    func didSelect(_ airportLocation: AirportLocationRepresentable)
+public protocol AirportsMapViewDelegate: AnyObject {
+    func didSelectLocation()
 }
 
 public final class AirportsMapView: UIView {
@@ -31,7 +33,7 @@ public final class AirportsMapView: UIView {
     }
 }
 
-extension AirportsMapView: AirportMapViewLogic {
+extension AirportsMapView: AirportsMapViewLogic {
 
     public var view: UIView {
         return self
@@ -46,14 +48,21 @@ extension AirportsMapView: AirportMapViewLogic {
         }
     }
     
+    public func getSelectedLocation() -> AirportLocation? {
+       return mapView.selectedAnnotations.first as? AirportLocation
+    }
+    
+    public func clearSelection() {
+        mapView.selectedAnnotations = []
+    }
     
 }
 
 extension AirportsMapView: MKMapViewDelegate {
     
     public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        if let airportLocation = view.annotation as? AirportLocation {
-            self.delegate?.didSelect(airportLocation)
+        if let _ = view.annotation as? AirportLocation {
+            self.delegate?.didSelectLocation()
         }
     }
 }

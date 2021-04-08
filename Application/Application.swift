@@ -1,7 +1,5 @@
 import Foundation
-import Domain
 import UIKit
-import UI
 
 public protocol Application {
     func start()
@@ -10,17 +8,15 @@ public protocol Application {
 public class Main: Application {
     
     public var window: UIWindow?
+
+    let sceneFactory: SceneFactoryRepresentable
     
-    private let getAirports: GetAirports
-    private let getFlights: GetFlights
-    
-    public init(getAirports: GetAirports, getFlights: GetFlights) {
-        self.getAirports = getAirports
-        self.getFlights = getFlights
+    public init(sceneFactory: SceneFactoryRepresentable) {
+        self.sceneFactory = sceneFactory
     }
     
     public func start() {
-        let vc = makeAirportsMap()
+        let vc = sceneFactory.makeAirportsMapScene()
         let window = UIWindow(frame: UIScreen.main.bounds)
         let navigation = UINavigationController(rootViewController: vc)
         window.rootViewController = navigation
@@ -29,16 +25,4 @@ public class Main: Application {
         window.makeKeyAndVisible()
     }
     
-    private func makeAirportsMap() -> AirportsMapViewController {
-        let presenter = AirportsMapPresenter()
-        let interactor = AirportsMapInteractor(getAirports: getAirports)
-        let view = AirportsMapView()
-        let viewController = AirportsMapViewController(interactor: interactor, viewLogic: view)
-        
-        view.delegate = viewController
-        presenter.displayLogic = viewController
-        interactor.presenter = presenter
-        
-        return viewController
-    }
 }

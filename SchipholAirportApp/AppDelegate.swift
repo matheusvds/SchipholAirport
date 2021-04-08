@@ -10,7 +10,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let httpClient = URLSessionAdapter()
         let getAirports = RemoteGetAirports(httpClient: httpClient)
         let getFlights = RemoteGetFlights(httpClient: httpClient)
-        let main = Main(getAirports: getAirports, getFlights: getFlights)
+        let sceneFactory = SceneFactory(getAirports: getAirports, getFlights: getFlights)
+        let main = Main(sceneFactory: sceneFactory)
         main.window = self?.window
         return main
     }()

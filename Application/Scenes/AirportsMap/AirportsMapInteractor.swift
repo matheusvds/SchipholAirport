@@ -29,6 +29,7 @@ extension AirportsMapInteractor: AirportsMapBusinessLogic {
         getAirports.getAirports(getAirportsModel: GetAirportsModel()) { [weak self] in
             switch $0 {
             case .success(let airports):
+                self?.airports = airports
                 let response = AirportsMap.GetAirports.Response(airports: airports)
                 self?.presenter?.presentFetchedAirports(response: response)
             case .failure:

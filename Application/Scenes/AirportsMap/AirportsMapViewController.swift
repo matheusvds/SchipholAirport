@@ -8,13 +8,15 @@ protocol AirportsMapDisplayLogic: AnyObject {
 
 final class AirportsMapViewController: UIViewController {
     
-    let interactor: AirportsMapBusinessLogic
-    let viewLogic: AirportMapViewLogic
+    private let interactor: AirportsMapBusinessLogic
+    let viewLogic: AirportsMapViewLogic
+    let router: AirportsMapRouterLogic
     
     // MARK: - Lifecycle
-    init(interactor: AirportsMapBusinessLogic, viewLogic: AirportMapViewLogic) {
+    init(interactor: AirportsMapBusinessLogic, viewLogic: AirportsMapViewLogic, router: AirportsMapRouterLogic) {
         self.interactor = interactor
         self.viewLogic = viewLogic
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,7 +47,7 @@ extension AirportsMapViewController: AirportsMapDisplayLogic {
 }
 
 extension AirportsMapViewController: AirportsMapViewDelegate {
-    func didSelect(_ airportLocation: AirportLocationRepresentable) {
-        
+    func didSelectLocation() {
+        router?.routeToAirportDetail()
     }
 }

@@ -72,6 +72,14 @@
 		C65A80D9261E25DE0077F02C /* AirportsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A80D8261E25DE0077F02C /* AirportsMapView.swift */; };
 		C65A80E1261E25FE0077F02C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A80E0261E25FE0077F02C /* ViewCode.swift */; };
 		C65A80EF261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A80EE261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift */; };
+		C65A8128261E4E780077F02C /* AirportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8127261E4E780077F02C /* AirportDetailViewController.swift */; };
+		C65A8136261E4F8B0077F02C /* AirportDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8135261E4F8B0077F02C /* AirportDetailInteractor.swift */; };
+		C65A813E261E4FAE0077F02C /* AirportDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A813D261E4FAE0077F02C /* AirportDetailPresenter.swift */; };
+		C65A8146261E4FFF0077F02C /* AirportsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8145261E4FFF0077F02C /* AirportsDetailRouter.swift */; };
+		C65A814E261E510E0077F02C /* AirportDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A814D261E510E0077F02C /* AirportDetailModels.swift */; };
+		C65A815C261E57CF0077F02C /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A815B261E57CF0077F02C /* SceneFactory.swift */; };
+		C65A816B261E62A90077F02C /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A816A261E62A90077F02C /* AirportDetailView.swift */; };
+		C65A8191261F44230077F02C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8190261F44230077F02C /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,6 +282,14 @@
 		C65A80D8261E25DE0077F02C /* AirportsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapView.swift; sourceTree = "<group>"; };
 		C65A80E0261E25FE0077F02C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		C65A80EE261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsMapViewModelRepresentable.swift; sourceTree = "<group>"; };
+		C65A8127261E4E780077F02C /* AirportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailViewController.swift; sourceTree = "<group>"; };
+		C65A8135261E4F8B0077F02C /* AirportDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailInteractor.swift; sourceTree = "<group>"; };
+		C65A813D261E4FAE0077F02C /* AirportDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailPresenter.swift; sourceTree = "<group>"; };
+		C65A8145261E4FFF0077F02C /* AirportsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsDetailRouter.swift; sourceTree = "<group>"; };
+		C65A814D261E510E0077F02C /* AirportDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailModels.swift; sourceTree = "<group>"; };
+		C65A815B261E57CF0077F02C /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
+		C65A816A261E62A90077F02C /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
+		C65A8190261F44230077F02C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				C65A804B261E1FBE0077F02C /* Application.swift */,
+				C65A815B261E57CF0077F02C /* SceneFactory.swift */,
 				C65A8026261E11330077F02C /* Scenes */,
 				C65A7FFC261E10600077F02C /* Info.plist */,
 			);
@@ -590,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				C65A8027261E118B0077F02C /* AirportsMap */,
+				C65A8126261E4E600077F02C /* AirportDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -622,6 +640,7 @@
 			children = (
 				C65A80E0261E25FE0077F02C /* ViewCode.swift */,
 				C65A80D5261E25B30077F02C /* Scenes */,
+				C65A818F261F44160077F02C /* Helpers */,
 				C65A80B6261E25290077F02C /* Info.plist */,
 			);
 			path = UI;
@@ -631,6 +650,7 @@
 			isa = PBXGroup;
 			children = (
 				C65A80D6261E25B80077F02C /* AirportsMap */,
+				C65A8169261E62830077F02C /* AirportDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -642,6 +662,34 @@
 				C65A80EE261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift */,
 			);
 			path = AirportsMap;
+			sourceTree = "<group>";
+		};
+		C65A8126261E4E600077F02C /* AirportDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C65A8127261E4E780077F02C /* AirportDetailViewController.swift */,
+				C65A8135261E4F8B0077F02C /* AirportDetailInteractor.swift */,
+				C65A813D261E4FAE0077F02C /* AirportDetailPresenter.swift */,
+				C65A8145261E4FFF0077F02C /* AirportsDetailRouter.swift */,
+				C65A814D261E510E0077F02C /* AirportDetailModels.swift */,
+			);
+			path = AirportDetail;
+			sourceTree = "<group>";
+		};
+		C65A8169261E62830077F02C /* AirportDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C65A816A261E62A90077F02C /* AirportDetailView.swift */,
+			);
+			path = AirportDetail;
+			sourceTree = "<group>";
+		};
+		C65A818F261F44160077F02C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C65A8190261F44230077F02C /* UIViewExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1106,9 +1154,15 @@
 				C65A804C261E1FBE0077F02C /* Application.swift in Sources */,
 				C65A8029261E119B0077F02C /* AirportsMapViewController.swift in Sources */,
 				C65A8045261E13D20077F02C /* AirportsMapModels.swift in Sources */,
+				C65A8146261E4FFF0077F02C /* AirportsDetailRouter.swift in Sources */,
 				C65A803E261E12480077F02C /* AirportsMapRouter.swift in Sources */,
+				C65A814E261E510E0077F02C /* AirportDetailModels.swift in Sources */,
 				C65A8037261E120D0077F02C /* AirportsMapPresenter.swift in Sources */,
+				C65A815C261E57CF0077F02C /* SceneFactory.swift in Sources */,
+				C65A8128261E4E780077F02C /* AirportDetailViewController.swift in Sources */,
 				C65A8030261E11DE0077F02C /* AirportsMapInteractor.swift in Sources */,
+				C65A8136261E4F8B0077F02C /* AirportDetailInteractor.swift in Sources */,
+				C65A813E261E4FAE0077F02C /* AirportDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,6 +1187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C65A80D9261E25DE0077F02C /* AirportsMapView.swift in Sources */,
+				C65A8191261F44230077F02C /* UIViewExtensions.swift in Sources */,
+				C65A816B261E62A90077F02C /* AirportDetailView.swift in Sources */,
 				C65A80EF261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift in Sources */,
 				C65A80E1261E25FE0077F02C /* ViewCode.swift in Sources */,
 			);
@@ -1350,6 +1406,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1376,6 +1433,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1401,6 +1459,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1427,6 +1486,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1489,6 +1549,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Infra/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1515,6 +1576,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Infra/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1610,6 +1672,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Application/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1635,6 +1698,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Application/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1691,7 +1755,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22D7B6J4M7;
 				INFOPLIST_FILE = SchipholAirportApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1710,7 +1776,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22D7B6J4M7;
 				INFOPLIST_FILE = SchipholAirportApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1733,6 +1801,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1759,6 +1828,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
