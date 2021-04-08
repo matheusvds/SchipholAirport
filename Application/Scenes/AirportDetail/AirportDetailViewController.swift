@@ -10,7 +10,6 @@ final class AirportDetailViewController: UIViewController {
     
     private let interactor: AirportDetailBusinessLogic
     private let viewLogic: AirportDetailViewLogic
-    private let myView = AirportDetailView()
     let router: AirportDetailRouterLogic
     var dismissBlock: (() -> Void)?
     
@@ -22,7 +21,7 @@ final class AirportDetailViewController: UIViewController {
     }
     
     override func loadView() {
-        view = myView
+        view = viewLogic.view
     }
     
     override func viewDidLoad() {
