@@ -1,0 +1,14 @@
+// MARK: - Airport Detail View
+"airpoirt_details" = "Airport details";
+"nearest_airport" = "nearest airport";
+"distance_nearest" = "distance to nearest airport";
+
+// MARK: - Loading
+"please_wait" = "Please wait";
+
+// MARK: - TabBar Items
+"map" = "Map";
+"airports" = "Airports";
+
+// MARK: ReachableAirportsScene
+"closest_airports" = "Closest Airports";

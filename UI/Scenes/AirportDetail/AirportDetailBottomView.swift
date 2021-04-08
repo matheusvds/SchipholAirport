@@ -5,7 +5,6 @@ final class AirportDetailBottomView: UIView {
 
     lazy var airportID: UILabel = {
         let view = UILabel()
-        view.text = "AMS"
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemGray4
@@ -15,7 +14,7 @@ final class AirportDetailBottomView: UIView {
     
     lazy var nearestAirportNameTitle: UILabel = {
         let view = UILabel()
-        view.text = "nearest airport"
+        view.text = NSLocalizedString("nearest_airport", comment: "nearest airport title")
         view.font = UIFont.boldSystemFont(ofSize: 12)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -23,7 +22,6 @@ final class AirportDetailBottomView: UIView {
 
     lazy var nearestAirportName: UILabel = {
         let view = UILabel()
-        view.text = "Norman International Airport"
         view.numberOfLines = 0
         view.font = UIFont.systemFont(ofSize: 13, weight: .light)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +30,7 @@ final class AirportDetailBottomView: UIView {
     
     lazy var nearestAirportDistanceTitle: UILabel = {
         let view = UILabel()
-        view.text = "distance to nearest airport"
+        view.text = NSLocalizedString("distance_nearest", comment: "nearest distance title")
         view.font = UIFont.boldSystemFont(ofSize: 12)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -40,7 +38,6 @@ final class AirportDetailBottomView: UIView {
 
     lazy var nearestAirportDistance: UILabel = {
         let view = UILabel()
-        view.text = "20 km"
         view.font = UIFont.systemFont(ofSize: 13, weight: .light)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

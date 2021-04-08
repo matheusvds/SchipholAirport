@@ -10,7 +10,7 @@ public final class AirportDetailView: UIView {
     
     private lazy var title: UILabel = {
        let view = UILabel()
-        view.text = "Airport details"
+        view.text = NSLocalizedString("airpoirt_details",comment: "airport detail title")
         view.font = UIFont.boldSystemFont(ofSize: 20)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemGray4
@@ -20,7 +20,6 @@ public final class AirportDetailView: UIView {
     
     private lazy var airportName: UILabel = {
         let view = UILabel()
-        view.text = "Norman Y. Mineta San Jose International Airport"
         view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .center
@@ -36,7 +35,6 @@ public final class AirportDetailView: UIView {
     
     private lazy var location: UILabel = {
         let view = UILabel()
-        view.text = "62.559643, -4.489616"
         view.font = UIFont.systemFont(ofSize: 14, weight: .light)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -44,7 +42,6 @@ public final class AirportDetailView: UIView {
     
     private lazy var city: UILabel = {
         let view = UILabel()
-        view.text = "Amsterdam"
         view.text = view.text?.uppercased()
         view.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +50,6 @@ public final class AirportDetailView: UIView {
 
     private lazy var countryId: UILabel = {
         let view = UILabel()
-        view.text = "NL"
         view.text = view.text?.uppercased()
         view.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -34,7 +34,7 @@ final class ReachableAirportsViewController: UIViewController {
     }
     
     private func setup() {
-        title = "Closest Airports"
+        title = NSLocalizedString("closest_airports", comment: "closest airports title")
     }
     
     private func start() {

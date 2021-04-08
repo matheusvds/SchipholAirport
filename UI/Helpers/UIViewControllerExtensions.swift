@@ -13,9 +13,11 @@ extension UIViewController {
         loadingIndicator.style = UIActivityIndicatorView.Style.medium
         loadingIndicator.startAnimating()
 
-        let alert = UIAlertController(title: nil,
-                                      message: "Please wait",
-                                      preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: nil,
+            message: NSLocalizedString("please_wait", comment: "waiting message"),
+            preferredStyle: .alert
+        )
         alert.view.addSubview(loadingIndicator)
         
         DispatchQueue.main.async { [weak self] in
