@@ -41,6 +41,7 @@ final class AirportsMapViewController: UIViewController {
 extension AirportsMapViewController: AirportsMapDisplayLogic {
     
     func displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel) {
+        router?.routeDataToReachableAirports()
         viewLogic.set(airportsMapViewModel: viewModel)
     }
 

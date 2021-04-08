@@ -3,7 +3,7 @@ import Domain
 
 enum ReachableAirports {
     
-    enum GetAirports {
+    enum GetFlights {
         
         struct Request {}
         

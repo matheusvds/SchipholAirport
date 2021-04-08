@@ -17,7 +17,7 @@ public class Main: Application {
     
     public func start() {
         let mapTab = makeAirportsMapTab()
-        let listTab = makeReacheableAirportsTab()
+        let listTab = makeReachableAirportsTab()
         let window = UIWindow(frame: UIScreen.main.bounds)
         let tabBar = UITabBarController()
         tabBar.viewControllers = [mapTab, listTab]
@@ -33,8 +33,8 @@ public class Main: Application {
         return mapVC
     }
     
-    private func makeReacheableAirportsTab() -> UIViewController {
-        let listVC = sceneFactory.makeReacheableAirportScene()
+    private func makeReachableAirportsTab() -> UIViewController {
+        let listVC = sceneFactory.makeReachableAirportScene()
         listVC.tabBarItem = UITabBarItem(title: "Airports", image: UIImage(systemName: "airplane.circle"), tag: 1)
         let navigation = UINavigationController(rootViewController: listVC)
         navigation.navigationBar.prefersLargeTitles = true

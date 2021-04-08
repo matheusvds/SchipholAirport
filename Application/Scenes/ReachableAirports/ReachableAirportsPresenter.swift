@@ -6,6 +6,6 @@ protocol ReachableAirportsPresentationLogic {
 
 final class ReachableAirportsPresenter: ReachableAirportsPresentationLogic {
     
-    weak var viewController: ReacheableAirportsDisplayLogic?
+    weak var viewController: ReachableAirportsDisplayLogic?
     
 }

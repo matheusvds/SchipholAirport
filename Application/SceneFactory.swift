@@ -14,10 +14,16 @@ public protocol AirportDetailFactory: AnyObject {
 }
 
 public protocol ReachableAirportFactory: AnyObject {
-    func makeReacheableAirportScene() -> UIViewController
+    func makeReachableAirportScene() -> UIViewController
 }
 
-final public class SceneFactory: SceneFactoryRepresentable {
+protocol ReachableAirportsDataSharing: AnyObject {
+    var reachableAirportsDataSharing: ReachableAirportsDataPassing? { get set }
+}
+
+final public class SceneFactory: SceneFactoryRepresentable, ReachableAirportsDataSharing {
+    
+    var reachableAirportsDataSharing: ReachableAirportsDataPassing?
     
     private let getAirports: GetAirports
     private let getFlights: GetFlights
@@ -36,6 +42,7 @@ final public class SceneFactory: SceneFactoryRepresentable {
         
         view.delegate = viewController
         router.airportDetailFactory = self
+        router.reachableAirportsDataSharing = self
         router.dataStore = interactor
         router.viewController = viewController
         presenter.displayLogic = viewController
@@ -59,15 +66,17 @@ final public class SceneFactory: SceneFactoryRepresentable {
         return viewController
     }
     
-    public func makeReacheableAirportScene() -> UIViewController {
-        let presenter = ReacheableAirportsPresenter()
-        let interactor = ReacheableAirportsInteractor(getFlights: getFlights)
-        let router = ReacheableAirportsRouter()
-        let viewController = ReacheableAirportsViewController(interactor: interactor, router: router)
+    public func makeReachableAirportScene() -> UIViewController {
+        let presenter = ReachableAirportsPresenter()
+        let interactor = ReachableAirportsInteractor(getFlights: getFlights)
+        let router = ReachableAirportsRouter()
+        let viewController = ReachableAirportsViewController(interactor: interactor, router: router)
         
+        router.dataStore = interactor
         router.viewController = viewController
         presenter.viewController = viewController
         interactor.presenter = presenter
+        reachableAirportsDataSharing = router
         
         return viewController
     }

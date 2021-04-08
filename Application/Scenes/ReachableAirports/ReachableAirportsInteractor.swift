@@ -6,14 +6,14 @@ protocol ReachableAirportsBusinessLogic {
 }
 
 protocol ReachableAirportsDataStore {
-    var airports: Airports! { get }
+    var airports: Airports! { get set }
 }
 
 final class ReachableAirportsInteractor: ReachableAirportsDataStore {
     
     var airports: Airports!
     
-    var presenter: ReacheableAirportsPresentationLogic?
+    var presenter: ReachableAirportsPresentationLogic?
     
     let getFlights: GetFlights
     
