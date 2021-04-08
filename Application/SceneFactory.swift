@@ -3,7 +3,7 @@ import Domain
 import UIKit
 import UI
 
-public typealias SceneFactoryRepresentable = AirportsMapFactory & AirportDetailFactory
+public typealias SceneFactoryRepresentable = AirportsMapFactory & AirportDetailFactory & ReachableAirportFactory
 
 public protocol AirportsMapFactory: AnyObject {
     func makeAirportsMapScene() -> UIViewController
@@ -11,6 +11,10 @@ public protocol AirportsMapFactory: AnyObject {
 
 public protocol AirportDetailFactory: AnyObject {
     func makeAirportDetailScene() -> UIViewController
+}
+
+public protocol ReachableAirportFactory: AnyObject {
+    func makeReacheableAirportScene() -> UIViewController
 }
 
 final public class SceneFactory: SceneFactoryRepresentable {
@@ -48,6 +52,19 @@ final public class SceneFactory: SceneFactoryRepresentable {
         let viewController = AirportDetailViewController(interactor: interactor, viewLogic: view, router: router)
         
         router.dataStore = interactor
+        router.viewController = viewController
+        presenter.viewController = viewController
+        interactor.presenter = presenter
+        
+        return viewController
+    }
+    
+    public func makeReacheableAirportScene() -> UIViewController {
+        let presenter = ReacheableAirportsPresenter()
+        let interactor = ReacheableAirportsInteractor(getFlights: getFlights)
+        let router = ReacheableAirportsRouter()
+        let viewController = ReacheableAirportsViewController(interactor: interactor, router: router)
+        
         router.viewController = viewController
         presenter.viewController = viewController
         interactor.presenter = presenter
