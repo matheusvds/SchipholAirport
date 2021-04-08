@@ -26,11 +26,15 @@ final class AirportDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        definesPresentationContext = true
+        start()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func start() {
+        interactor.fetchAirportDetail(request: AirportDetail.GetDetail.Request())
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,7 +48,7 @@ final class AirportDetailViewController: UIViewController {
 extension AirportDetailViewController: AirportDetailDisplayLogic {
     
     func displayAirportDetail(viewModel: AirportDetail.GetDetail.ViewModel) {
-        
+        viewLogic.set(viewModel: viewModel)
     }
 }
 

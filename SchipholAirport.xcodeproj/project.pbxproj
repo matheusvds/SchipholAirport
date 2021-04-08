@@ -80,6 +80,7 @@
 		C65A815C261E57CF0077F02C /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A815B261E57CF0077F02C /* SceneFactory.swift */; };
 		C65A816B261E62A90077F02C /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A816A261E62A90077F02C /* AirportDetailView.swift */; };
 		C65A8191261F44230077F02C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A8190261F44230077F02C /* UIViewExtensions.swift */; };
+		C65A819F261F520A0077F02C /* AirportDetailViewModelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A819E261F520A0077F02C /* AirportDetailViewModelRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +291,7 @@
 		C65A815B261E57CF0077F02C /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		C65A816A261E62A90077F02C /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
 		C65A8190261F44230077F02C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		C65A819E261F520A0077F02C /* AirportDetailViewModelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailViewModelRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -680,6 +682,7 @@
 			isa = PBXGroup;
 			children = (
 				C65A816A261E62A90077F02C /* AirportDetailView.swift */,
+				C65A819E261F520A0077F02C /* AirportDetailViewModelRepresentable.swift */,
 			);
 			path = AirportDetail;
 			sourceTree = "<group>";
@@ -1188,6 +1191,7 @@
 			files = (
 				C65A80D9261E25DE0077F02C /* AirportsMapView.swift in Sources */,
 				C65A8191261F44230077F02C /* UIViewExtensions.swift in Sources */,
+				C65A819F261F520A0077F02C /* AirportDetailViewModelRepresentable.swift in Sources */,
 				C65A816B261E62A90077F02C /* AirportDetailView.swift in Sources */,
 				C65A80EF261E2D7E0077F02C /* AirportsMapViewModelRepresentable.swift in Sources */,
 				C65A80E1261E25FE0077F02C /* ViewCode.swift in Sources */,

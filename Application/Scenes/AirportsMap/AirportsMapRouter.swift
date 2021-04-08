@@ -29,7 +29,7 @@ extension AirportsMapRouter: AirportsMapRoutingLogic {
     
     func navigateToAirportDetail(source: AirportsMapViewController?, destination: UIViewController) {
         DispatchQueue.main.async {
-            destination.modalPresentationStyle = .overCurrentContext
+            destination.modalPresentationStyle = .automatic
             destination.modalTransitionStyle = .coverVertical
             if let destination = destination as? AirportDetailViewController {
                 destination.dismissBlock = { [weak source] in source?.viewLogic.clearSelection() }
@@ -41,6 +41,7 @@ extension AirportsMapRouter: AirportsMapRoutingLogic {
     func passDataToAirportDetail(source: AirportsMapDataStore, destination: inout AirportDetailDataStore) {
         let selectedAirportLocation = viewController?.viewLogic.getSelectedLocation()
         let airport = dataStore?.airports.first(where: { $0.id == selectedAirportLocation?.title })
-        destination.airport = airport
+        destination.selectedAirport = airport
+        destination.airports = source.airports
     }
 }

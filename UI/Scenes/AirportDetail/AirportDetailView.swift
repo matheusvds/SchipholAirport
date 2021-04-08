@@ -3,6 +3,7 @@ import UIKit
 
 public protocol AirportDetailViewLogic {
     var view: UIView { get }
+    func set(viewModel: AirportDetailViewModel)
 }
 
 public final class AirportDetailView: UIView {
@@ -45,6 +46,7 @@ public final class AirportDetailView: UIView {
         let view = UILabel()
         view.text = "Amsterdam"
         view.text = view.text?.uppercased()
+        view.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -53,7 +55,7 @@ public final class AirportDetailView: UIView {
         let view = UILabel()
         view.text = "NL"
         view.text = view.text?.uppercased()
-        view.font = UIFont.boldSystemFont(ofSize: 17)
+        view.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -61,6 +63,7 @@ public final class AirportDetailView: UIView {
     private lazy var airportID: UILabel = {
         let view = UILabel()
         view.text = "AMS"
+        view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemGray4
         view.font = UIFont.systemFont(ofSize: 40, weight: .black)
@@ -133,6 +136,16 @@ extension AirportDetailView: AirportDetailViewLogic {
         return self
     }
     
+    public func set(viewModel: AirportDetailViewModel) {
+        self.airportName.text = viewModel.airportName
+        self.location.text = viewModel.location
+        self.city.text = viewModel.city
+        self.countryId.text = viewModel.countryID
+        self.airportID.text = viewModel.airportID
+        self.nearestAirportName.text = viewModel.nearestAirport
+        self.nearestAirportDistance.text = viewModel.nearestAirportDistance
+    }
+    
 }
 
 extension AirportDetailView: ViewCode {
@@ -157,23 +170,24 @@ extension AirportDetailView: ViewCode {
         let countryIdEstimatedWidth: CGFloat = 20
         let textSpacing: CGFloat = 10
         let padding: CGFloat = 20
-        let bottomPadding: CGFloat = 40
+        let topMargin: CGFloat = 24
+        let bottomMargin: CGFloat = 30
         
         NSLayoutConstraint.activate([
             container.topAnchor.constraint(equalTo: self.centerYAnchor),
-            container.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -50),
+            container.widthAnchor.constraint(equalTo: self.widthAnchor),
             container.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             container.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: container.topAnchor, constant: textSpacing),
+            title.topAnchor.constraint(equalTo: container.topAnchor, constant: topMargin),
             title.widthAnchor.constraint(equalTo: container.widthAnchor),
             title.centerXAnchor.constraint(equalTo: container.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            airportName.topAnchor.constraint(equalTo: title.bottomAnchor, constant: textSpacing),
+            airportName.topAnchor.constraint(equalTo: title.bottomAnchor, constant: textSpacing*(3/2)),
             airportName.widthAnchor.constraint(equalTo: container.widthAnchor, constant: -padding),
             airportName.centerXAnchor.constraint(equalTo: container.centerXAnchor)
         ])
@@ -185,7 +199,7 @@ extension AirportDetailView: ViewCode {
         ])
         
         NSLayoutConstraint.activate([
-            location.topAnchor.constraint(equalTo: airportName.bottomAnchor, constant: textSpacing),
+            location.topAnchor.constraint(equalTo: airportName.bottomAnchor, constant: textSpacing/2),
             location.leadingAnchor.constraint(equalTo: pinImage.trailingAnchor, constant: textSpacing),
             location.centerXAnchor.constraint(equalTo: airportName.centerXAnchor, constant: (textSpacing + imageSize)/2)
         ])
@@ -196,7 +210,7 @@ extension AirportDetailView: ViewCode {
         ])
         
         NSLayoutConstraint.activate([
-            countryId.leadingAnchor.constraint(equalTo: city.trailingAnchor, constant: textSpacing),
+            countryId.leadingAnchor.constraint(equalTo: city.trailingAnchor, constant: textSpacing/2),
             countryId.centerYAnchor.constraint(equalTo: city.centerYAnchor)
         ])
         
@@ -204,7 +218,8 @@ extension AirportDetailView: ViewCode {
             airportID.topAnchor.constraint(equalTo: city.bottomAnchor, constant: 2*textSpacing),
             airportID.leadingAnchor.constraint(equalTo: airportName.leadingAnchor, constant: textSpacing),
             airportID.heightAnchor.constraint(equalTo: airportID.widthAnchor),
-            airportID.bottomAnchor.constraint(greaterThanOrEqualTo: container.bottomAnchor, constant: -bottomPadding)
+            airportID.widthAnchor.constraint(equalToConstant: 110),
+            airportID.bottomAnchor.constraint(greaterThanOrEqualTo: container.bottomAnchor, constant: -bottomMargin)
         ])
         
         NSLayoutConstraint.activate([

@@ -6,12 +6,14 @@ protocol AirportDetailBusinessLogic {
 }
 
 protocol AirportDetailDataStore {
-    var airport: Airport! { get set }
+    var airports: Airports! { get set }
+    var selectedAirport: Airport! { get set }
 }
 
 final class AirportDetailInteractor: AirportDetailDataStore {
     
-    var airport: Airport!
+    var airports: Airports!
+    var selectedAirport: Airport!
     
     var presenter: AirportDetailPresentationLogic?
     
@@ -20,6 +22,7 @@ final class AirportDetailInteractor: AirportDetailDataStore {
 extension AirportDetailInteractor: AirportDetailBusinessLogic {
     
     func fetchAirportDetail(request: AirportDetail.GetDetail.Request) {
-        
+        let response = AirportDetail.GetDetail.Response(selectedAirport: selectedAirport, airports: airports)
+        presenter?.presentAirportDetail(response: response)
     }
 }

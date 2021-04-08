@@ -1,5 +1,6 @@
 import Foundation
 import Domain
+import UI
 
 enum AirportDetail {
     
@@ -7,8 +8,11 @@ enum AirportDetail {
         
         struct Request {}
         
-        struct Response {}
+        struct Response {
+            let selectedAirport: Airport
+            let airports: Airports
+        }
         
-        struct ViewModel {}
+        typealias ViewModel = AirportDetailViewModel
     }
 }
