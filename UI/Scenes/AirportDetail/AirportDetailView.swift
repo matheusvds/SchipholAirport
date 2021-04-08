@@ -121,11 +121,6 @@ extension AirportDetailView: ViewCode {
         container.addSubview(city)
         container.addSubview(countryId)
         container.addSubview(bottomContainer)
-//        container.addSubview(airportID)
-//        container.addSubview(nearestAirportNameTitle)
-//        container.addSubview(nearestAirportName)
-//        container.addSubview(nearestAirportDistanceTitle)
-//        container.addSubview(nearestAirportDistance)
     }
     
     func setupConstraints() {
