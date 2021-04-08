@@ -34,12 +34,12 @@ final class AirportDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-       {
-           let touch = touches.first
-           if touch?.view == self.view
-           { self.dismiss(animated: true, completion: dismissBlock) }
-       }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if touch?.view == self.view {
+            self.dismiss(animated: true, completion: dismissBlock)
+        }
+    }
 }
 
 extension AirportDetailViewController: AirportDetailDisplayLogic {
