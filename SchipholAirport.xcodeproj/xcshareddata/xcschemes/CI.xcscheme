@@ -76,20 +76,6 @@
                ReferencedContainer = "container:SchipholAirport.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C65A7FA9261D06540077F02C"
-               BuildableName = "UseCasesIntegrationTests.xctest"
-               BlueprintName = "UseCasesIntegrationTests"
-               ReferencedContainer = "container:SchipholAirport.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -154,16 +140,6 @@
                BlueprintIdentifier = "C65A7F5F261D01F30077F02C"
                BuildableName = "InfraTests.xctest"
                BlueprintName = "InfraTests"
-               ReferencedContainer = "container:SchipholAirport.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C65A7FA9261D06540077F02C"
-               BuildableName = "UseCasesIntegrationTests.xctest"
-               BlueprintName = "UseCasesIntegrationTests"
                ReferencedContainer = "container:SchipholAirport.xcodeproj">
             </BuildableReference>
          </TestableReference>
