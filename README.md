@@ -1,3 +1,5 @@
+[![Build Status](https://app.bitrise.io/app/639744cfddd384c5/status.svg?token=A3-KoNSvEouJF7ceoDS-nw&branch=master)](https://app.bitrise.io/app/639744cfddd384c5)
+
 # SchipholAirport
 An iOS application written in Swift using the Clean Architecture design that consumes a REST API to show relevant information about the Schiphol Airport.
 
