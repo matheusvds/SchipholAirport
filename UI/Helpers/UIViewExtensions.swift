@@ -9,6 +9,10 @@ extension UIView {
          mask.path = path.cgPath
          self.layer.mask = mask
     }
+    
+    var screenWidth: CGFloat {
+        return UIScreen.main.bounds.width
+    }
 
 }
 

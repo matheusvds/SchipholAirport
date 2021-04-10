@@ -109,6 +109,7 @@ extension AirportDetailView: AirportDetailViewLogic {
 extension AirportDetailView: ViewCode {
     
     func setupHierarchy() {
+        print(UIScreen.main.bounds.width)
         addSubview(container)
         container.addSubview(title)
         container.addSubview(airportName)
@@ -171,7 +172,8 @@ extension AirportDetailView: ViewCode {
         NSLayoutConstraint.activate([
             bottomContainer.topAnchor.constraint(equalTo: city.bottomAnchor, constant: 2*textSpacing),
             bottomContainer.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            bottomContainer.bottomAnchor.constraint(equalTo: container.bottomAnchor)
+            bottomContainer.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            bottomContainer.widthAnchor.constraint(equalTo: container.widthAnchor, constant: -screenWidth/4)
         ])
 
     }
