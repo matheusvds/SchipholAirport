@@ -23,7 +23,7 @@ final class AirportsMapRouter: NSObject, AirportsMapDataPassing {
 extension AirportsMapRouter: AirportsMapRoutingLogic {
     
     func routeDataToReachableAirports() {
-        var destinationDataStore = reachableAirportsDataSharing.reachableAirportsDataSharing!.dataStore!
+        var destinationDataStore = reachableAirportsDataSharing.reachableAirportsDataPassing!.dataStore!
         passDataToReachableAirports(source: dataStore!, destination: &destinationDataStore)
     }
     

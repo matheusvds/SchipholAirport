@@ -18,12 +18,12 @@ public protocol ReachableAirportFactory: AnyObject {
 }
 
 protocol ReachableAirportsDataSharing: AnyObject {
-    var reachableAirportsDataSharing: ReachableAirportsDataPassing? { get set }
+    var reachableAirportsDataPassing: ReachableAirportsDataPassing? { get set }
 }
 
 final public class SceneFactory: SceneFactoryRepresentable, ReachableAirportsDataSharing {
     
-    var reachableAirportsDataSharing: ReachableAirportsDataPassing?
+    var reachableAirportsDataPassing: ReachableAirportsDataPassing?
     
     private let getAirports: GetAirports
     private let getFlights: GetFlights
@@ -77,7 +77,7 @@ final public class SceneFactory: SceneFactoryRepresentable, ReachableAirportsDat
         router.viewController = viewController
         presenter.viewController = viewController
         interactor.presenter = presenter
-        reachableAirportsDataSharing = router
+        reachableAirportsDataPassing = router
         
         return viewController
     }
