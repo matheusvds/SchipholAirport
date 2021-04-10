@@ -21,8 +21,10 @@ public class Main: Application {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
         tabBarController.tabBar.isTranslucent = true
+        tabBarController.tabBar.tintColor = .white
         tabBarController.viewControllers = [mapTab, listTab]
         window.rootViewController = tabBarController
+        window.overrideUserInterfaceStyle = .dark
         self.window = window
         
         window.makeKeyAndVisible()

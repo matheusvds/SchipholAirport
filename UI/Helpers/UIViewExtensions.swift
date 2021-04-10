@@ -14,6 +14,11 @@ extension UIView {
     var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
     }
+    
+    func emptyView(heightenBy height: CGFloat) -> UIView {
+        let frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: height))
+        return UIView(frame: frame)
+    }
 }
 
 extension UITableViewCell: Identifiable { }

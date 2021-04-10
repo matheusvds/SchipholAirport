@@ -15,7 +15,7 @@ public final class ReachableAirportsView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.register(ReachableAirportCell.self, forCellReuseIdentifier: ReachableAirportCell.reuseIdentifier)
         view.dataSource = self
-        view.tableHeaderView = UIView()
+        view.tableHeaderView = emptyView(heightenBy: 20.0)
         return view
     }()
     
@@ -29,7 +29,6 @@ public final class ReachableAirportsView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 // MARK: - ReachableAirportsViewLogic
