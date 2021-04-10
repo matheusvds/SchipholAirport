@@ -23,6 +23,7 @@ final class AirportsMapInteractor: AirportsMapDataStore {
     }
 }
 
+// MARK: - AirportsMapBusinessLogic
 extension AirportsMapInteractor: AirportsMapBusinessLogic {
     
     func fetchAirports(request: AirportsMap.GetAirports.Request) {

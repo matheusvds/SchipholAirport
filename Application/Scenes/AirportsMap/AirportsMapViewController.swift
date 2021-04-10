@@ -39,6 +39,7 @@ final class AirportsMapViewController: UIViewController {
     }
 }
 
+// MARK: - AirportsMapDisplayLogic
 extension AirportsMapViewController: AirportsMapDisplayLogic {
     
     func displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel) {
@@ -46,9 +47,9 @@ extension AirportsMapViewController: AirportsMapDisplayLogic {
         viewLogic.stopLoading(at: self)
         viewLogic.set(airportsMapViewModel: viewModel)
     }
-
 }
 
+// MARK: - AirportsMapViewDelegate
 extension AirportsMapViewController: AirportsMapViewDelegate {
     func didSelectLocation() {
         router?.routeToAirportDetail()

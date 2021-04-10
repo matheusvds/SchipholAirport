@@ -13,6 +13,5 @@ final class AirportDetailRouter: AirportDetailDataPassing {
     var dataStore: AirportDetailDataStore?
 }
 
-extension AirportDetailRouter: AirportDetailRoutingLogic {
-    
-}
+// MARK: - AirportDetailRoutingLogic
+extension AirportDetailRouter: AirportDetailRoutingLogic { }

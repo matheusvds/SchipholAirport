@@ -35,6 +35,7 @@ public final class AirportsMapView: UIView {
     }
 }
 
+// MARK: - AirportsMapViewLogic
 extension AirportsMapView: AirportsMapViewLogic {
 
     public var view: UIView {
@@ -58,9 +59,9 @@ extension AirportsMapView: AirportsMapViewLogic {
         let selectedAnnotation = mapView.selectedAnnotations.first
         self.mapView.deselectAnnotation(selectedAnnotation, animated: true)
     }
-    
 }
 
+// MARK: - MKMapViewDelegate
 extension AirportsMapView: MKMapViewDelegate {
     
     public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -70,6 +71,7 @@ extension AirportsMapView: MKMapViewDelegate {
     }
 }
 
+// MARK: - ViewCode
 extension AirportsMapView: ViewCode {
     
     func setupHierarchy() {

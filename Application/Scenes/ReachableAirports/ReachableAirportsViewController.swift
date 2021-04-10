@@ -41,9 +41,9 @@ final class ReachableAirportsViewController: UIViewController {
         viewLogic.startLoading(at: self)
         interactor.fetchClosestsAirports(request: ReachableAirports.GetAirports.Request())
     }
-    
 }
 
+// MARK: - ReachableAirportsDisplayLogic
 extension ReachableAirportsViewController: ReachableAirportsDisplayLogic {
     
     func displayClosestsAirports(viewModel: ReachableAirports.GetAirports.ViewModel) {
@@ -51,7 +51,6 @@ extension ReachableAirportsViewController: ReachableAirportsDisplayLogic {
             self?.viewLogic.set(viewModel: viewModel)
         }
     }
-    
 }
 
 

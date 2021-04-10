@@ -18,5 +18,4 @@ enum ReachableAirports {
         typealias ViewModel = ReachableAirportsViewModel
         
     }
-    
 }

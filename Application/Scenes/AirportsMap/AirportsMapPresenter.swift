@@ -9,6 +9,7 @@ final class AirportsMapPresenter {
     weak var displayLogic: AirportsMapDisplayLogic?
 }
 
+// MARK: - AirportsMapPresentationLogic
 extension AirportsMapPresenter: AirportsMapPresentationLogic {
     
     func presentFetchedAirports(response: AirportsMap.GetAirports.Response) {
@@ -25,5 +26,4 @@ extension AirportsMapPresenter: AirportsMapPresentationLogic {
         
         displayLogic?.displayFetchedAirports(viewModel: AirportsMap.GetAirports.ViewModel(items: locations))
     }
-    
 }

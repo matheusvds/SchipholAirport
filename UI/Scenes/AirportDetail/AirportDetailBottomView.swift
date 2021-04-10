@@ -53,6 +53,7 @@ final class AirportDetailBottomView: UIView {
     }
 }
 
+// MARK: - ViewCode
 extension AirportDetailBottomView: ViewCode {
     func setupHierarchy() {
         addSubview(airportID)

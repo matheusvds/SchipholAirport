@@ -88,6 +88,7 @@ public final class AirportDetailView: UIView {
     }
 }
 
+// MARK: - AirportDetailViewLogic
 extension AirportDetailView: AirportDetailViewLogic {
     
     public var view: UIView {
@@ -103,9 +104,9 @@ extension AirportDetailView: AirportDetailViewLogic {
         self.bottomContainer.nearestAirportName.text = viewModel.nearestAirport
         self.bottomContainer.nearestAirportDistance.text = viewModel.nearestAirportDistance
     }
-    
 }
 
+// MARK: - ViewCode
 extension AirportDetailView: ViewCode {
     
     func setupHierarchy() {
@@ -181,5 +182,4 @@ extension AirportDetailView: ViewCode {
     func additionalConfiguration() {
         backgroundColor = .clear
     }
-    
 }

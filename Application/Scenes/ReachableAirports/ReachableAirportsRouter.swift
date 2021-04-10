@@ -13,6 +13,5 @@ final class ReachableAirportsRouter: ReachableAirportsDataPassing {
     var dataStore: ReachableAirportsDataStore?
 }
 
-extension ReachableAirportsRouter: ReachableAirportsRoutingLogic {
-    
-}
+// MARK: - ReachableAirportsRoutingLogic
+extension ReachableAirportsRouter: ReachableAirportsRoutingLogic { }

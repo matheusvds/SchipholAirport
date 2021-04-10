@@ -19,6 +19,7 @@ final class AirportDetailInteractor: AirportDetailDataStore {
     
 }
 
+// MARK: - AirportDetailBusinessLogic
 extension AirportDetailInteractor: AirportDetailBusinessLogic {
     
     func fetchAirportDetail(request: AirportDetail.GetDetail.Request) {

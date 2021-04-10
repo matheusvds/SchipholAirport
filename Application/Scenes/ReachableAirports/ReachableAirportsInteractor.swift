@@ -20,9 +20,9 @@ final class ReachableAirportsInteractor: ReachableAirportsDataStore {
     init(getFlights: GetFlights) {
         self.getFlights = getFlights
     }
-    
 }
 
+// MARK: - ReachableAirportsBusinessLogic
 extension ReachableAirportsInteractor: ReachableAirportsBusinessLogic {
     
     func fetchClosestsAirports(request: ReachableAirports.GetAirports.Request) {
@@ -38,5 +38,4 @@ extension ReachableAirportsInteractor: ReachableAirportsBusinessLogic {
             }
         }
     }
-    
 }

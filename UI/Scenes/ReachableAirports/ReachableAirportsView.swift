@@ -32,6 +32,7 @@ public final class ReachableAirportsView: UIView {
     
 }
 
+// MARK: - ReachableAirportsViewLogic
 extension ReachableAirportsView: ReachableAirportsViewLogic {
 
     public var view: UIView {
@@ -46,6 +47,7 @@ extension ReachableAirportsView: ReachableAirportsViewLogic {
     }
 }
  
+// MARK: - UITableViewDataSource
 extension ReachableAirportsView: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +62,7 @@ extension ReachableAirportsView: UITableViewDataSource {
     }
 }
 
+// MARK: - ViewCode
 extension ReachableAirportsView: ViewCode {
     
     func setupHierarchy() {

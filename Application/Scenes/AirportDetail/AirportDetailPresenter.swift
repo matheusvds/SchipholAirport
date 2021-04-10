@@ -9,6 +9,7 @@ final class AirportDetailPresenter {
     weak var viewController: AirportDetailDisplayLogic?
 }
 
+// MARK: - AirportDetailPresentationLogic
 extension AirportDetailPresenter: AirportDetailPresentationLogic {
     
     func presentAirportDetail(response: AirportDetail.GetDetail.Response) {
