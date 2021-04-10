@@ -26,6 +26,7 @@ final class AirportDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPresentationControllerDelegate()
         start()
     }
     
@@ -37,6 +38,10 @@ final class AirportDetailViewController: UIViewController {
         interactor.fetchAirportDetail(request: AirportDetail.GetDetail.Request())
     }
     
+    private func setupPresentationControllerDelegate() {
+        self.presentationController?.delegate = self
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         if touch?.view == self.view {
@@ -52,3 +57,9 @@ extension AirportDetailViewController: AirportDetailDisplayLogic {
     }
 }
 
+extension AirportDetailViewController: UIAdaptivePresentationControllerDelegate {
+    
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        dismissBlock?()
+    }
+}
