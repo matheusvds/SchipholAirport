@@ -55,7 +55,8 @@ extension AirportsMapView: AirportsMapViewLogic {
     }
     
     public func clearSelection() {
-        mapView.selectedAnnotations = []
+        let selectedAnnotation = mapView.selectedAnnotations.first
+        self.mapView.deselectAnnotation(selectedAnnotation, animated: true)
     }
     
 }
