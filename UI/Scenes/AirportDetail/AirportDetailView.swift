@@ -110,7 +110,6 @@ extension AirportDetailView: AirportDetailViewLogic {
 extension AirportDetailView: ViewCode {
     
     func setupHierarchy() {
-        print(UIScreen.main.bounds.width)
         addSubview(container)
         container.addSubview(title)
         container.addSubview(airportName)
