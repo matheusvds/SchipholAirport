@@ -12,11 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let getFlights = RemoteGetFlights(httpClient: httpClient)
         let sceneFactory = SceneFactory(getAirports: getAirports, getFlights: getFlights)
         let main = Main(sceneFactory: sceneFactory)
-        main.window = self?.window
         return main
     }()
-
-    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         app.start()
